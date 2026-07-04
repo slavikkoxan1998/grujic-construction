@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet-async";
 import SiteHeader from "../components/SiteHeader";
 import SiteFooter from "../components/SiteFooter";
 import { images } from "../lib/images";
-import { business, SITE_URL } from "../lib/business";
+import { business, SITE_URL, NOTIFY_EMAIL } from "../lib/business";
 import { services } from "../data/services";
 
 export default function Index() {
@@ -190,25 +190,42 @@ export default function Index() {
               {/* Contact Form */}
               <div className="bg-white/5 p-6 sm:p-8 md:p-10 rounded-xl border border-white/10">
                 <h3 className="text-2xl md:text-3xl font-bold mb-8">Napište nám</h3>
-                <form className="space-y-6">
+                <form
+                  className="space-y-6"
+                  action={`https://formsubmit.co/${NOTIFY_EMAIL}`}
+                  method="POST"
+                >
+                  {/* Email subject */}
+                  <input type="hidden" name="_subject" value="Nová poptávka z webu GRUJIČ CONSTRUCTION" />
+                  {/* Nicely formatted email instead of raw POST dump */}
+                  <input type="hidden" name="_template" value="table" />
+                  {/* Skip FormSubmit's captcha page for a smoother mobile experience */}
+                  <input type="hidden" name="_captcha" value="false" />
+                  {/* Honeypot field against spam bots - keep hidden from real users */}
+                  <input type="text" name="_honey" className="hidden" tabIndex={-1} autoComplete="off" />
+
                   <input
                     type="text"
+                    name="Jméno"
                     placeholder="Vaše jméno"
                     className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-[#D4A574] transition-colors"
                     required
                   />
                   <input
                     type="email"
+                    name="Email"
                     placeholder="Váš e-mail"
                     className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-[#D4A574] transition-colors"
                     required
                   />
                   <input
                     type="tel"
+                    name="Telefon"
                     placeholder="Telefonní číslo"
                     className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-[#D4A574] transition-colors"
                   />
                   <textarea
+                    name="Zpráva"
                     placeholder="Vaše zpráva"
                     rows={5}
                     className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-[#D4A574] transition-colors resize-none"

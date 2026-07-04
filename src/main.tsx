@@ -6,6 +6,7 @@ import "./index.css";
 import Index from "./pages/Index";
 import ServicePage from "./pages/ServicePage";
 import NotFound from "./pages/NotFound";
+import CallButton from "./components/CallButton";
 
 // Vite's BASE_URL reflects whatever `base` is set in vite.config.ts
 // (here "/grujic-construction/" to match the GitHub Pages project path).
@@ -20,6 +21,7 @@ createRoot(document.getElementById("root")!).render(
           <Route path="/:slug" element={<ServicePage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
+        <CallButton />
       </BrowserRouter>
     </HelmetProvider>
   </StrictMode>,
