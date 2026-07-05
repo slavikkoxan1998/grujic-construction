@@ -182,7 +182,7 @@ export default function Index() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16">
               {/* Contact Info */}
               <div className="text-center flex flex-col items-center">
-                <img src={images.logo} alt="GRUJIČ CONSTRUCTION logo" className="h-16 mb-8 object-contain" />
+                <img src={images.logo_new} alt="GRUJIČ CONSTRUCTION logo" className="h-24 mb-6 object-contain" />
                 <h2 className="text-3xl md:text-4xl font-bold mb-4">{business.name}</h2>
                 <p className="text-[#D4A574] text-lg mb-8 font-light">Vše v jednom...výstavba od A do Z</p>
 

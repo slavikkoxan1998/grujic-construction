@@ -11,7 +11,7 @@ export default function SiteHeader() {
       <div className="max-w-7xl mx-auto px-4 md:px-8 h-20 flex items-center justify-between">
         <Link to="/" className="flex items-center flex-shrink-0">
           <img
-            src={images.logo}
+            src={images.logo_new}
             alt="GRUJIČ CONSTRUCTION - stavební firma Brno"
             className="h-16 w-auto object-contain"
           />
