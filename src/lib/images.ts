@@ -8,7 +8,7 @@ const base = import.meta.env.BASE_URL;
 export const images = {
   bg_hero: `${base}images/bg_hero.webp`,
   logo: `${base}logo.png`,
-  logo_new: `${base}logo_new.png`,
+  logo_new: `${base}logo_new.png?v=2`,
   workers: `${base}images/workers.webp`,
   facade: `${base}images/facade.webp`,
   ceiling: `${base}images/ceiling.webp`,
