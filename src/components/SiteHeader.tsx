@@ -43,6 +43,9 @@ export default function SiteHeader() {
           <Link to="/#projects" className="px-4 py-2 hover:text-white transition-colors text-sm">
             {t.nav.projects}
           </Link>
+          <Link to="/#testimonials" className="px-4 py-2 hover:text-white transition-colors text-sm">
+            {t.nav.reviews}
+          </Link>
           <Link to="/#contact" className="px-4 py-2 hover:text-white transition-colors text-sm">
             {t.nav.contact}
           </Link>
@@ -153,6 +156,9 @@ export default function SiteHeader() {
             </Link>
             <Link to="/#projects" className="block text-white py-2 hover:text-white/80 transition-colors" onClick={() => setMobileMenuOpen(false)}>
               {t.nav.projects}
+            </Link>
+            <Link to="/#testimonials" className="block text-white py-2 hover:text-white/80 transition-colors" onClick={() => setMobileMenuOpen(false)}>
+              {t.nav.reviews}
             </Link>
             <Link to="/#contact" className="block text-white py-2 hover:text-white/80 transition-colors" onClick={() => setMobileMenuOpen(false)}>
               {t.nav.contact}

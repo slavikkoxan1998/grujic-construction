@@ -8,6 +8,7 @@ export const translations = {
       about: "O nás",
       services: "Služby",
       projects: "Projekty",
+      reviews: "Recenze",
       contact: "Kontakt",
       writeUs: "Napište nám",
     },
@@ -29,7 +30,16 @@ export const translations = {
       services: "Naše služby",
       projects: "Naše projekty",
       moreProjects: "Další realizace",
+      testimonials: "Recenze klientů",
       contact: "Kontakt",
+    },
+    // Testimonials
+    testimonials: {
+      subtitle: "Co o nás říkají naši klienti",
+      ctaTitle: "Máte zkušenost s námi?",
+      ctaText:
+        "Budeme moc rádi, když se s ostatními podělíte o svou zkušenost. Vaše recenze nám pomáhá růst a dalším klientům usnadní rozhodování.",
+      ctaButton: "Napsat recenzi na Google",
     },
     // Contact form
     form: {
@@ -71,6 +81,7 @@ export const translations = {
       about: "About us",
       services: "Services",
       projects: "Projects",
+      reviews: "Reviews",
       contact: "Contact",
       writeUs: "Write to us",
     },
@@ -89,7 +100,16 @@ export const translations = {
       services: "Our services",
       projects: "Our projects",
       moreProjects: "More projects",
+      testimonials: "Client reviews",
       contact: "Contact",
+    },
+    // Testimonials
+    testimonials: {
+      subtitle: "What our clients say about us",
+      ctaTitle: "Have you worked with us?",
+      ctaText:
+        "We'd love it if you shared your experience with others. Your review helps us grow and helps future clients decide.",
+      ctaButton: "Write a review on Google",
     },
     form: {
       title: "Write to us",
@@ -127,6 +147,7 @@ export const translations = {
       about: "O nás",
       services: "Služby",
       projects: "Projekty",
+      reviews: "Recenzie",
       contact: "Kontakt",
       writeUs: "Napíšte nám",
     },
@@ -145,7 +166,16 @@ export const translations = {
       services: "Naše služby",
       projects: "Naše projekty",
       moreProjects: "Ďalšie realizácie",
+      testimonials: "Recenzie klientov",
       contact: "Kontakt",
+    },
+    // Testimonials
+    testimonials: {
+      subtitle: "Čo o nás hovoria naši klienti",
+      ctaTitle: "Máte skúsenosť s nami?",
+      ctaText:
+        "Budeme veľmi radi, ak sa s ostatnými podelíte o svoju skúsenosť. Vaša recenzia nám pomáha rásť a ďalším klientom uľahčí rozhodovanie.",
+      ctaButton: "Napísať recenziu na Google",
     },
     form: {
       title: "Napíšte nám",

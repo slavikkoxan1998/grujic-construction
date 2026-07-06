@@ -7,12 +7,14 @@ import { images } from "../lib/images";
 import { business, SITE_URL, NOTIFY_EMAIL } from "../lib/business";
 import { services } from "../data/services";
 import { featuredProjects, moreProjects } from "../data/projects";
+import { testimonials } from "../data/testimonials";
 import ProjectShowcase from "../components/ProjectShowcase";
 import { useLang } from "../contexts/LanguageContext";
 
 export default function Index() {
   const location = useLocation();
-  const { t } = useLang();
+  const { t, lang } = useLang();
+  const reviews = testimonials[lang];
 
   // Support cross-page anchor links like <Link to="/#contact">
   useEffect(() => {
@@ -276,6 +278,59 @@ export default function Index() {
                   </button>
                 </form>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Testimonials Section */}
+        <section id="testimonials" className="py-12 sm:py-16 md:py-32 bg-[#f8f7f5]">
+          <div className="max-w-7xl mx-auto px-4 md:px-8">
+            <div className="mb-8 sm:mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-[#3a3a3a] mb-4">{t.sections.testimonials}</h2>
+              <p className="text-xl text-[#555555] font-light">{t.testimonials.subtitle}</p>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-10 sm:mb-16">
+              {reviews.map((review) => (
+                <div
+                  key={review.name}
+                  className="bg-white p-6 md:p-8 rounded-xl shadow-md border border-[#eee] flex flex-col"
+                >
+                  <div className="flex gap-1 text-[#D4A574] mb-4" aria-label={`${review.rating} / 5`}>
+                    {Array.from({ length: 5 }).map((_, i) => (
+                      <svg
+                        key={i}
+                        viewBox="0 0 20 20"
+                        className={`w-5 h-5 ${i < review.rating ? "fill-current" : "fill-[#e5e0da]"}`}
+                      >
+                        <path d="M10 1.5l2.6 5.27 5.82.85-4.21 4.1.99 5.8L10 14.77l-5.2 2.75.99-5.8-4.21-4.1 5.82-.85z" />
+                      </svg>
+                    ))}
+                  </div>
+                  <p className="text-[#555555] leading-relaxed flex-1 mb-6">"{review.text}"</p>
+                  <div>
+                    <p className="text-[#3a3a3a] font-semibold">{review.name}</p>
+                    <p className="text-[#999999] text-sm">{review.location}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Leave a review CTA — links out to Google, where reviews are actually verified/hosted */}
+            <div className="bg-white rounded-xl border border-[#eee] shadow-md p-6 sm:p-8 md:p-10 text-center max-w-2xl mx-auto">
+              <h3 className="text-2xl md:text-3xl font-bold text-[#3a3a3a] mb-3">{t.testimonials.ctaTitle}</h3>
+              <p className="text-[#555555] mb-6">{t.testimonials.ctaText}</p>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=GRUJI%C4%8C+CONSTRUCTION+s.r.o.+K%C3%B6rnerova+455%2F7+Brno"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-[#D4A574] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#C89860] transition-colors"
+              >
+                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 1.5l3.09 6.26 6.91 1-5 4.87 1.18 6.87L12 17.27l-6.18 3.23L7 13.63l-5-4.87 6.91-1z" />
+                </svg>
+                {t.testimonials.ctaButton}
+              </a>
             </div>
           </div>
         </section>
