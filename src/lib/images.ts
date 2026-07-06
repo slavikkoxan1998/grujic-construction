@@ -23,7 +23,7 @@ export const images = {
   demolition: `${base}images/demolition.webp`,
   earthworks: `${base}images/earthworks.webp`,
   cleaning: `${base}images/cleaning.webp`,
-  project1: `${base}images/project1.webp`,
+  project1: `${base}images/project1.webp?v=2`,
   project2: `${base}images/project2.webp`,
   project3: `${base}images/project3.webp`,
   project4: `${base}images/project4.webp`,
