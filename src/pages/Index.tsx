@@ -8,9 +8,11 @@ import { business, SITE_URL, NOTIFY_EMAIL } from "../lib/business";
 import { services } from "../data/services";
 import { featuredProjects, moreProjects } from "../data/projects";
 import ProjectShowcase from "../components/ProjectShowcase";
+import { useLang } from "../contexts/LanguageContext";
 
 export default function Index() {
   const location = useLocation();
+  const { t } = useLang();
 
   // Support cross-page anchor links like <Link to="/#contact">
   useEffect(() => {
@@ -50,16 +52,16 @@ export default function Index() {
           <div className="relative z-10 w-full max-w-7xl mx-auto px-4 md:px-8 py-12 sm:py-16 md:py-24">
             <div className="max-w-2xl">
               <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 md:mb-6 leading-tight">
-                Kvalitní stavební řešení
+                {t.hero.h1}
               </h1>
               <p className="text-base sm:text-lg md:text-2xl text-white/90 mb-6 sm:mb-8 md:mb-10 font-light">
-                Spolehlivé, odolné a profesionální služby pro vaše stavební projekty
+                {t.hero.subtitle}
               </p>
               <a
                 href="#contact"
                 className="inline-block bg-[#D4A574] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#C89860] transition-colors text-lg"
               >
-                Začněte dnes
+                {t.hero.cta}
               </a>
             </div>
           </div>
@@ -70,17 +72,10 @@ export default function Index() {
           <div className="max-w-7xl mx-auto px-4 md:px-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
               <div>
-                <h2 className="text-4xl md:text-5xl font-bold text-[#3a3a3a] mb-6">O nás</h2>
-                <h3 className="text-2xl md:text-3xl font-semibold text-[#D4A574] mb-6">Naše mise</h3>
-                <p className="text-lg text-[#555555] leading-relaxed mb-6">
-                  Jsme moderní stavební firma s hlubokými kořeny v oboru. Zaměřujeme se na poskytování
-                  špičkových stavebních a rekonstrukčních prací s důrazem na kvalitu a inovaci.
-                </p>
-                <p className="text-lg text-[#555555] leading-relaxed">
-                  S desítkami úspěšně dokončených projektů garantujeme spokojenost našich klientů.
-                  Pracujeme s kvalitními materiály a máme profesionálně vyškolený tým, který zajistí
-                  špičkovou kvalitu každé realizace.
-                </p>
+                <h2 className="text-4xl md:text-5xl font-bold text-[#3a3a3a] mb-6">{t.about.title}</h2>
+                <h3 className="text-2xl md:text-3xl font-semibold text-[#D4A574] mb-6">{t.about.mission}</h3>
+                <p className="text-lg text-[#555555] leading-relaxed mb-6">{t.about.p1}</p>
+                <p className="text-lg text-[#555555] leading-relaxed">{t.about.p2}</p>
               </div>
               <div className="relative">
                 <img
@@ -98,7 +93,7 @@ export default function Index() {
         <section id="services" className="py-12 sm:py-16 md:py-32 bg-[#f8f7f5]">
           <div className="max-w-7xl mx-auto px-4 md:px-8">
             <div className="mb-8 sm:mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-[#3a3a3a] mb-4">Naše služby</h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-[#3a3a3a] mb-4">{t.sections.services}</h2>
               <p className="text-xl text-[#555555] font-light">Kompletní nabídka stavebních prací</p>
             </div>
 
@@ -120,7 +115,7 @@ export default function Index() {
         <section id="projects" className="py-12 sm:py-16 md:py-32 bg-white">
           <div className="max-w-7xl mx-auto px-4 md:px-8">
             <div className="mb-8 sm:mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-[#3a3a3a] mb-4">Naše projekty</h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-[#3a3a3a] mb-4">{t.sections.projects}</h2>
               <p className="text-xl text-[#555555] font-light">Realizované stavby a jejich kvalita</p>
             </div>
 
@@ -131,7 +126,7 @@ export default function Index() {
             </div>
 
             <h3 className="text-2xl sm:text-3xl font-bold text-[#3a3a3a] mb-6 sm:mb-8">
-              Další realizace
+              {t.sections.moreProjects}
             </h3>
             <div className="grid grid-cols-2 lg:grid-cols-5 gap-3 sm:gap-6">
               {moreProjects.map((p) => (
@@ -165,17 +160,17 @@ export default function Index() {
 
                 <div className="space-y-6 mb-12">
                   <div>
-                    <h3 className="text-[#D4A574] font-semibold text-sm mb-2">ADRESA</h3>
+                    <h3 className="text-[#D4A574] font-semibold text-sm mb-2">{t.contact.address}</h3>
                     <p className="text-[#D4A574]/90">{business.street}</p>
                     <p className="text-[#D4A574]/90">
                       {business.city}, {business.postalCode}
                     </p>
                   </div>
                   <div>
-                    <h3 className="text-[#D4A574] font-semibold text-sm mb-2">KONTAKT</h3>
+                    <h3 className="text-[#D4A574] font-semibold text-sm mb-2">{t.contact.contactLabel}</h3>
                     <p className="text-[#D4A574]/90">
                       <a href={`tel:${business.phone}`} className="hover:text-white transition-colors">
-                        Telefon: {business.phoneDisplay}
+                        {t.contact.phone}: {business.phoneDisplay}
                       </a>
                     </p>
                     <p className="text-[#D4A574]/90">
@@ -185,8 +180,8 @@ export default function Index() {
                     </p>
                   </div>
                   <div>
-                    <h3 className="text-[#D4A574] font-semibold text-sm mb-2">ÚDAJE</h3>
-                    <p className="text-[#D4A574]/90">Jednatel: {business.owner}</p>
+                    <h3 className="text-[#D4A574] font-semibold text-sm mb-2">{t.contact.details}</h3>
+                    <p className="text-[#D4A574]/90">{t.contact.owner}: {business.owner}</p>
                     <p className="text-[#D4A574]/90">IČO: {business.ico}</p>
                     <p className="text-[#D4A574]/90">DIČ: {business.dic}</p>
                   </div>
@@ -226,7 +221,7 @@ export default function Index() {
 
               {/* Contact Form — standard POST */}
               <div className="bg-white/5 p-6 sm:p-8 md:p-10 rounded-xl border border-white/10">
-                <h3 className="text-2xl md:text-3xl font-bold mb-2">Napište nám</h3>
+                <h3 className="text-2xl md:text-3xl font-bold mb-2">{t.form.title}</h3>
                 <p className="text-white/60 text-sm mb-8">
                   ✉{" "}
                   <a href={`mailto:${business.email}`} className="text-amber-400 hover:text-amber-300 transition-colors">
@@ -248,26 +243,26 @@ export default function Index() {
                   <input
                     type="text"
                     name="Jméno"
-                    placeholder="Vaše jméno"
+                    placeholder={t.form.name}
                     className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-[#D4A574] transition-colors"
                     required
                   />
                   <input
                     type="email"
                     name="Email"
-                    placeholder="Váš e-mail"
+                    placeholder={t.form.email}
                     className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-[#D4A574] transition-colors"
                     required
                   />
                   <input
                     type="tel"
                     name="Telefon"
-                    placeholder="Telefonní číslo"
+                    placeholder={t.form.phone}
                     className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-[#D4A574] transition-colors"
                   />
                   <textarea
                     name="Zpráva"
-                    placeholder="Vaše zpráva"
+                    placeholder={t.form.message}
                     rows={5}
                     className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-[#D4A574] transition-colors resize-none"
                     required
@@ -277,7 +272,7 @@ export default function Index() {
                     type="submit"
                     className="w-full bg-[#D4A574] text-white py-3 rounded-lg font-semibold hover:bg-[#C89860] transition-colors"
                   >
-                    Odeslat zprávu
+                    {t.form.send}
                   </button>
                 </form>
               </div>
