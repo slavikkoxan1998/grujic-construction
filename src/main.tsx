@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import ServicePage from "./pages/ServicePage";
 import NotFound from "./pages/NotFound";
 import CallButton from "./components/CallButton";
+import ScrollToTop from "./components/ScrollToTop";
 
 // Vite's BASE_URL reflects whatever `base` is set in vite.config.ts
 // (here "/grujic-construction/" to match the GitHub Pages project path).
@@ -16,6 +17,7 @@ createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <HelmetProvider>
       <BrowserRouter basename={basename}>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/:slug" element={<ServicePage />} />
