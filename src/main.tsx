@@ -8,6 +8,7 @@ import ServicePage from "./pages/ServicePage";
 import NotFound from "./pages/NotFound";
 import CallButton from "./components/CallButton";
 import ScrollToTop from "./components/ScrollToTop";
+import CookieBanner from "./components/CookieBanner";
 import { LanguageProvider } from "./contexts/LanguageContext";
 
 // Vite's BASE_URL reflects whatever `base` is set in vite.config.ts
@@ -26,6 +27,7 @@ createRoot(document.getElementById("root")!).render(
           <Route path="*" element={<NotFound />} />
         </Routes>
         <CallButton />
+        <CookieBanner />
         </LanguageProvider>
       </BrowserRouter>
     </HelmetProvider>
