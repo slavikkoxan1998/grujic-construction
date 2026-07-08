@@ -28,7 +28,9 @@ export const translations = {
     // Sections
     sections: {
       services: "Naše služby",
+      servicesSubtitle: "Kompletní nabídka stavebních prací",
       projects: "Naše projekty",
+      projectsSubtitle: "Realizované stavby a jejich kvalita",
       moreProjects: "Další realizace",
       testimonials: "Recenze klientů",
       contact: "Kontakt",
@@ -58,12 +60,15 @@ export const translations = {
       email: "E-mail",
       details: "ÚDAJE",
       owner: "Jednatel",
+      tagline: "Vše v jednom...výstavba od A do Z",
+      mapAriaLabel: "Google Maps – poloha firmy",
     },
     // Footer
     footer: {
       rights: "Všechna práva vyhrazena",
       services: "Služby",
       privacy: "Ochrana soukromí",
+      terms: "Obchodní podmínky",
     },
     // ServicePage
     service: {
@@ -72,6 +77,19 @@ export const translations = {
       whyUs: "Proč si vybrat GRUJIČ CONSTRUCTION",
       faq: "Časté dotazy",
       otherServices: "Další služby",
+      learnMore: "Zjistit více →",
+    },
+    // Image alt texts
+    alt: {
+      hero: "Stavební firma GRUJIČ CONSTRUCTION - luxusní stavební projekt",
+      about: "Stavební tým GRUJIČ CONSTRUCTION při práci",
+    },
+    // Legal pages
+    legal: {
+      terms: "Obchodní podmínky",
+      privacy: "Zásady ochrany osobních údajů",
+      backHome: "Zpět na hlavní stránku",
+      lastUpdated: "Naposledy aktualizováno",
     },
   },
 
@@ -98,7 +116,9 @@ export const translations = {
     },
     sections: {
       services: "Our services",
+      servicesSubtitle: "Complete range of construction work",
       projects: "Our projects",
+      projectsSubtitle: "Completed builds and their quality",
       moreProjects: "More projects",
       testimonials: "Client reviews",
       contact: "Contact",
@@ -126,11 +146,14 @@ export const translations = {
       email: "E-mail",
       details: "COMPANY INFO",
       owner: "Director",
+      tagline: "Everything in one place...building from A to Z",
+      mapAriaLabel: "Google Maps – company location",
     },
     footer: {
       rights: "All rights reserved",
       services: "Services",
       privacy: "Privacy policy",
+      terms: "Terms of Service",
     },
     service: {
       breadcrumbServices: "Services",
@@ -138,6 +161,17 @@ export const translations = {
       whyUs: "Why choose GRUJIČ CONSTRUCTION",
       faq: "Frequently asked questions",
       otherServices: "Other services",
+      learnMore: "Learn more →",
+    },
+    alt: {
+      hero: "GRUJIČ CONSTRUCTION construction company - premium building project",
+      about: "GRUJIČ CONSTRUCTION construction team at work",
+    },
+    legal: {
+      terms: "Terms of Service",
+      privacy: "Privacy Policy",
+      backHome: "Back to homepage",
+      lastUpdated: "Last updated",
     },
   },
 
@@ -164,7 +198,9 @@ export const translations = {
     },
     sections: {
       services: "Naše služby",
+      servicesSubtitle: "Kompletná ponuka stavebných prác",
       projects: "Naše projekty",
+      projectsSubtitle: "Realizované stavby a ich kvalita",
       moreProjects: "Ďalšie realizácie",
       testimonials: "Recenzie klientov",
       contact: "Kontakt",
@@ -192,11 +228,14 @@ export const translations = {
       email: "E-mail",
       details: "ÚDAJE",
       owner: "Konateľ",
+      tagline: "Všetko v jednom...výstavba od A po Z",
+      mapAriaLabel: "Google Maps – poloha firmy",
     },
     footer: {
       rights: "Všetky práva vyhradené",
       services: "Služby",
       privacy: "Ochrana súkromia",
+      terms: "Obchodné podmienky",
     },
     service: {
       breadcrumbServices: "Služby",
@@ -204,6 +243,17 @@ export const translations = {
       whyUs: "Prečo si vybrať GRUJIČ CONSTRUCTION",
       faq: "Časté otázky",
       otherServices: "Ďalšie služby",
+      learnMore: "Zistiť viac →",
+    },
+    alt: {
+      hero: "Stavebná firma GRUJIČ CONSTRUCTION - luxusný stavebný projekt",
+      about: "Stavebný tím GRUJIČ CONSTRUCTION pri práci",
+    },
+    legal: {
+      terms: "Obchodné podmienky",
+      privacy: "Zásady ochrany osobných údajov",
+      backHome: "Späť na hlavnú stránku",
+      lastUpdated: "Naposledy aktualizované",
     },
   },
 } as const;

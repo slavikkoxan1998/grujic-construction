@@ -5,6 +5,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./index.css";
 import Index from "./pages/Index";
 import ServicePage from "./pages/ServicePage";
+import TermsPage from "./pages/TermsPage";
+import PrivacyPage from "./pages/PrivacyPage";
 import NotFound from "./pages/NotFound";
 import CallButton from "./components/CallButton";
 import ScrollToTop from "./components/ScrollToTop";
@@ -23,6 +25,8 @@ createRoot(document.getElementById("root")!).render(
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/obchodni-podminky" element={<TermsPage />} />
+          <Route path="/zasady-ochrany-osobnich-udaju" element={<PrivacyPage />} />
           <Route path="/:slug" element={<ServicePage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

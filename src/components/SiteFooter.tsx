@@ -1,12 +1,14 @@
 import { Link } from "react-router-dom";
 import { business } from "../lib/business";
+import { useLang } from "../contexts/LanguageContext";
 
 export default function SiteFooter() {
+  const { t } = useLang();
   return (
     <footer className="bg-[#1a1a1a] text-white/60 py-8 border-t border-white/10">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm">&copy; 2026 GRUJIČ CONSTRUCTION s.r.o. Všechna práva vyhrazena.</p>
+          <p className="text-sm">&copy; 2026 GRUJIČ CONSTRUCTION s.r.o. {t.footer.rights}.</p>
           <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6">
             <a
               href={`mailto:${business.email}`}
@@ -15,11 +17,11 @@ export default function SiteFooter() {
               ✉ {business.email}
             </a>
             <div className="flex gap-6">
-              <Link to="/" className="text-white/60 hover:text-white transition-colors text-sm">
-                Obchodní podmínky
+              <Link to="/obchodni-podminky" className="text-white/60 hover:text-white transition-colors text-sm">
+                {t.footer.terms}
               </Link>
-              <Link to="/" className="text-white/60 hover:text-white transition-colors text-sm">
-                Zásady ochrany osobních údajů
+              <Link to="/zasady-ochrany-osobnich-udaju" className="text-white/60 hover:text-white transition-colors text-sm">
+                {t.footer.privacy}
               </Link>
             </div>
           </div>

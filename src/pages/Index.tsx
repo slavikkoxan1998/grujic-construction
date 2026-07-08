@@ -11,10 +11,32 @@ import { testimonials } from "../data/testimonials";
 import ProjectShowcase from "../components/ProjectShowcase";
 import { useLang } from "../contexts/LanguageContext";
 
+const OG_LOCALE: Record<string, string> = { cs: "cs_CZ", en: "en_US", sk: "sk_SK" };
+
+const HOME_META: Record<string, { title: string; description: string }> = {
+  cs: {
+    title: "GRUJIČ CONSTRUCTION – Stavební firma Brno | Rekonstrukce, zateplení, výstavba domů",
+    description:
+      "GRUJIČ CONSTRUCTION s.r.o. – stavební firma v Brně. Výstavba domů, rekonstrukce, zateplení fasád, sádrokartony, obklady a dlažby, zemní práce a demolice.",
+  },
+  en: {
+    title: "GRUJIČ CONSTRUCTION – Construction company Brno | Renovations, insulation, house building",
+    description:
+      "GRUJIČ CONSTRUCTION s.r.o. – construction company in Brno. House building, renovations, facade insulation, drywall, tiling, groundworks and demolition.",
+  },
+  sk: {
+    title: "GRUJIČ CONSTRUCTION – Stavebná firma Brno | Rekonštrukcie, zateplenie, výstavba domov",
+    description:
+      "GRUJIČ CONSTRUCTION s.r.o. – stavebná firma v Brne. Výstavba domov, rekonštrukcie, zateplenie fasád, sadrokartóny, obklady a dlažby, zemné práce a demolácie.",
+  },
+};
+
 export default function Index() {
   const location = useLocation();
   const { t, lang } = useLang();
   const reviews = testimonials[lang];
+  const langServices = services[lang];
+  const meta = HOME_META[lang];
 
   // Support cross-page anchor links like <Link to="/#contact">
   useEffect(() => {
@@ -28,13 +50,15 @@ export default function Index() {
 
   return (
     <div className="min-h-screen flex flex-col bg-white">
-      <Helmet>
-        <title>GRUJIČ CONSTRUCTION – Stavební firma Brno | Rekonstrukce, zateplení, výstavba domů</title>
-        <meta
-          name="description"
-          content="GRUJIČ CONSTRUCTION s.r.o. – stavební firma v Brně. Výstavba domů, rekonstrukce, zateplení fasád, sádrokartony, obklady a dlažby, zemní práce a demolice."
-        />
+      <Helmet htmlAttributes={{ lang }}>
+        <title>{meta.title}</title>
+        <meta name="description" content={meta.description} />
         <link rel="canonical" href={`${SITE_URL}/`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content={OG_LOCALE[lang]} />
+        <meta property="og:title" content={meta.title} />
+        <meta property="og:description" content={meta.description} />
+        <meta property="og:url" content={`${SITE_URL}/`} />
       </Helmet>
 
       <SiteHeader />
@@ -44,7 +68,7 @@ export default function Index() {
         <section className="relative w-full min-h-[520px] sm:min-h-[600px] md:min-h-[750px] overflow-hidden flex items-center">
           <img
             src={images.bg_hero}
-            alt="Stavební firma GRUJIČ CONSTRUCTION - luxusní stavební projekt"
+            alt={t.alt.hero}
             className="absolute inset-0 w-full h-full object-cover"
             loading="eager"
             fetchPriority="high"
@@ -82,7 +106,7 @@ export default function Index() {
               <div className="relative">
                 <img
                   src={images.workers}
-                  alt="Stavební tým GRUJIČ CONSTRUCTION při práci"
+                  alt={t.alt.about}
                   className="w-full h-auto rounded-xl shadow-xl object-cover aspect-[4/3]"
                   loading="lazy"
                 />
@@ -96,17 +120,18 @@ export default function Index() {
           <div className="max-w-7xl mx-auto px-4 md:px-8">
             <div className="mb-8 sm:mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-[#3a3a3a] mb-4">{t.sections.services}</h2>
-              <p className="text-xl text-[#555555] font-light">Kompletní nabídka stavebních prací</p>
+              <p className="text-xl text-[#555555] font-light">{t.sections.servicesSubtitle}</p>
             </div>
 
             <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6 md:gap-8">
-              {services.map((s) => (
+              {langServices.map((s) => (
                 <ServiceCard
                   key={s.slug}
                   slug={s.slug}
                   title={s.cardTitle}
                   image={images[s.imageKey]}
                   description={s.metaDescription}
+                  learnMore={t.service.learnMore}
                 />
               ))}
             </div>
@@ -118,7 +143,7 @@ export default function Index() {
           <div className="max-w-7xl mx-auto px-4 md:px-8">
             <div className="mb-8 sm:mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-[#3a3a3a] mb-4">{t.sections.projects}</h2>
-              <p className="text-xl text-[#555555] font-light">Realizované stavby a jejich kvalita</p>
+              <p className="text-xl text-[#555555] font-light">{t.sections.projectsSubtitle}</p>
             </div>
 
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 mb-10 sm:mb-16">
@@ -158,7 +183,7 @@ export default function Index() {
               <div className="text-center flex flex-col items-center">
                 <img src={images.logo_new} alt="GRUJIČ CONSTRUCTION logo" className="h-24 mb-6 object-contain" />
                 <h2 className="text-3xl md:text-4xl font-bold mb-4">{business.name}</h2>
-                <p className="text-[#D4A574] text-lg mb-8 font-light">Vše v jednom...výstavba od A do Z</p>
+                <p className="text-[#D4A574] text-lg mb-8 font-light">{t.contact.tagline}</p>
 
                 <div className="space-y-6 mb-12">
                   <div>
@@ -177,7 +202,7 @@ export default function Index() {
                     </p>
                     <p className="text-[#D4A574]/90">
                       <a href={`mailto:${business.email}`} className="hover:text-white transition-colors">
-                        E-mail: {business.email}
+                        {t.contact.email}: {business.email}
                       </a>
                     </p>
                   </div>
@@ -212,7 +237,7 @@ export default function Index() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-10 h-10 rounded-full bg-white/10 hover:bg-[#D4A574] transition-colors flex items-center justify-center"
-                    aria-label="Google Maps – poloha firmy"
+                    aria-label={t.contact.mapAriaLabel}
                   >
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/>
@@ -346,11 +371,13 @@ function ServiceCard({
   title,
   image,
   description,
+  learnMore,
 }: {
   slug: string;
   title: string;
   image: string;
   description: string;
+  learnMore: string;
 }) {
   return (
     <Link
@@ -369,7 +396,7 @@ function ServiceCard({
         <h3 className="text-[#D4A574] text-sm sm:text-lg md:text-xl font-bold mb-1.5 sm:mb-3">{title}</h3>
         <p className="text-[#555555] text-xs sm:text-sm leading-relaxed line-clamp-3">{description}</p>
         <span className="mt-auto pt-2 text-[#D4A574] text-xs sm:text-sm font-semibold group-hover:underline">
-          Zjistit více →
+          {learnMore}
         </span>
       </div>
     </Link>
