@@ -239,7 +239,7 @@ export default function Index() {
                   <input type="hidden" name="_subject" value="Nová poptávka z webu GRUJIČ CONSTRUCTION" />
                   <input type="hidden" name="_template" value="table" />
                   <input type="hidden" name="_captcha" value="false" />
-                  <input type="hidden" name="_next" value="https://myprofile2403-design.github.io/grujic-construction/#contact" />
+                  <input type="hidden" name="_next" value="https://slavikkoxan1998.github.io/grujic-construction/#contact" />
                   <input type="text" name="_honey" className="hidden" tabIndex={-1} autoComplete="off" />
 
                   <input

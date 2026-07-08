@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://myprofile2403-design.github.io/grujic-construction/sitemap.xml
+Sitemap: https://slavikkoxan1998.github.io/grujic-construction/sitemap.xml

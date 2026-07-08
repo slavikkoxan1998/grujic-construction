@@ -1,4 +1,4 @@
-export const SITE_URL = "https://myprofile2403-design.github.io/grujic-construction";
+export const SITE_URL = "https://slavikkoxan1998.github.io/grujic-construction";
 
 // Email that receives contact-form submissions (via FormSubmit.co - no backend needed).
 // Change this to whichever inbox should get new leads.
