@@ -157,10 +157,14 @@ export default function Index() {
             </h3>
             <div className="grid grid-cols-2 lg:grid-cols-5 gap-3 sm:gap-6">
               {moreProjects.map((p) => (
-                <div key={p.name} className="rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
+                <Link
+                  key={p.slug}
+                  to={`/projekty/${p.slug}`}
+                  className="rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300"
+                >
                   <div className="aspect-square overflow-hidden">
                     <img
-                      src={images[p.image as keyof typeof images]}
+                      src={images[p.image]}
                       alt={p.name}
                       loading="lazy"
                       className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
@@ -169,7 +173,7 @@ export default function Index() {
                   <div className="bg-white p-3">
                     <h4 className="text-[#3a3a3a] font-medium text-xs sm:text-sm leading-snug">{p.name}</h4>
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
           </div>
