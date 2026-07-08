@@ -26,6 +26,14 @@ export default function SiteFooter() {
             </div>
           </div>
         </div>
+        <div className="mt-4 text-center">
+          <a
+            href="mailto:slavikkoxan1998@gmail.com"
+            className="text-white/30 hover:text-white/60 transition-colors text-xs"
+          >
+            Web vytvořil Jaroslav →
+          </a>
+        </div>
       </div>
     </footer>
   );
