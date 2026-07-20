@@ -31,7 +31,6 @@ export const translations = {
       servicesSubtitle: "Kompletní nabídka stavebních prací",
       projects: "Naše projekty",
       projectsSubtitle: "Realizované stavby a jejich kvalita",
-      moreProjects: "Další realizace",
       testimonials: "Recenze klientů",
       contact: "Kontakt",
     },
@@ -91,14 +90,6 @@ export const translations = {
       backHome: "Zpět na hlavní stránku",
       lastUpdated: "Naposledy aktualizováno",
     },
-    // ProjectPage (gallery subpages)
-    project: {
-      breadcrumbProjects: "Projekty",
-      gallery: "Fotogalerie",
-      workDone: "Co jsme realizovali",
-      backToProjects: "← Zpět na všechny projekty",
-      inquiry: "Chci podobnou realizaci",
-    },
   },
 
   en: {
@@ -127,7 +118,6 @@ export const translations = {
       servicesSubtitle: "Complete range of construction work",
       projects: "Our projects",
       projectsSubtitle: "Completed builds and their quality",
-      moreProjects: "More projects",
       testimonials: "Client reviews",
       contact: "Contact",
     },
@@ -181,13 +171,6 @@ export const translations = {
       backHome: "Back to homepage",
       lastUpdated: "Last updated",
     },
-    project: {
-      breadcrumbProjects: "Projects",
-      gallery: "Photo gallery",
-      workDone: "What we did",
-      backToProjects: "← Back to all projects",
-      inquiry: "I want a similar project",
-    },
   },
 
   sk: {
@@ -216,7 +199,6 @@ export const translations = {
       servicesSubtitle: "Kompletná ponuka stavebných prác",
       projects: "Naše projekty",
       projectsSubtitle: "Realizované stavby a ich kvalita",
-      moreProjects: "Ďalšie realizácie",
       testimonials: "Recenzie klientov",
       contact: "Kontakt",
     },
@@ -269,13 +251,6 @@ export const translations = {
       privacy: "Zásady ochrany osobných údajov",
       backHome: "Späť na hlavnú stránku",
       lastUpdated: "Naposledy aktualizované",
-    },
-    project: {
-      breadcrumbProjects: "Projekty",
-      gallery: "Fotogaléria",
-      workDone: "Čo sme zrealizovali",
-      backToProjects: "← Späť na všetky projekty",
-      inquiry: "Chcem podobnú realizáciu",
     },
   },
 } as const;

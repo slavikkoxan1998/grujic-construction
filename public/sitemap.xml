@@ -51,11 +51,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://slavikkoxan1998.github.io/grujic-construction/napinane-stropy</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://slavikkoxan1998.github.io/grujic-construction/hydroizolacni-folie</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -64,56 +59,6 @@
     <loc>https://slavikkoxan1998.github.io/grujic-construction/uklid</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://slavikkoxan1998.github.io/grujic-construction/projekty/rodinny-dum-brno-bystrc</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://slavikkoxan1998.github.io/grujic-construction/projekty/zatepleni-fasady-zabovresky</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://slavikkoxan1998.github.io/grujic-construction/projekty/rekonstrukce-koupelny-kralovo-pole</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://slavikkoxan1998.github.io/grujic-construction/projekty/kancelar-brno-stred</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://slavikkoxan1998.github.io/grujic-construction/projekty/zemni-prace-slapanice</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://slavikkoxan1998.github.io/grujic-construction/projekty/demolice-brno-turany</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://slavikkoxan1998.github.io/grujic-construction/projekty/vodoinstalace-modrice</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://slavikkoxan1998.github.io/grujic-construction/projekty/malby-a-natery-brno</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://slavikkoxan1998.github.io/grujic-construction/projekty/napinane-stropy-reckovice</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://slavikkoxan1998.github.io/grujic-construction/projekty/hydroizolace-brno-lisen</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://slavikkoxan1998.github.io/grujic-construction/obchodni-podminky</loc>

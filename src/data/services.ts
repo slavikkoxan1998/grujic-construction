@@ -21,7 +21,6 @@ export interface ServiceContent {
     | "plumbing"
     | "demolition"
     | "earthworks"
-    | "ceiling"
     | "foil"
     | "cleaning";
   intro: string[];
@@ -277,32 +276,6 @@ export const services: Record<Lang, ServiceContent[]> = {
           question: "Provádíte i terénní úpravy po výstavbě?",
           answer:
             "Ano, po dokončení stavby zajistíme i finální terénní úpravy a přípravu pozemku pro zahradní úpravy.",
-        },
-      ],
-    },
-    {
-      slug: "napinane-stropy",
-      cardTitle: "Napínané stropy",
-      h1: "Napínané stropy Brno – moderní stropní systémy",
-      metaTitle: "Napínané stropy Brno – instalace na klíč | GRUJIČ CONSTRUCTION",
-      metaDescription:
-        "Napínané stropy pro byty, domy i komerční prostory v Brně. Rychlá montáž bez nutnosti bourání, dlouhá životnost a snadná údržba.",
-      imageKey: "ceiling",
-      intro: [
-        "Instalujeme napínané stropy jako moderní a rychlou alternativu ke klasickým sádrokartonovým podhledům. Montáž v Brně zvládneme obvykle během jednoho dne bez nutnosti stěhování celé domácnosti.",
-        "Napínaný strop skryje nerovnosti původního stropu, elektroinstalace i vedení, a nabízí širokou škálu povrchů – matný, lesklý i s potiskem.",
-      ],
-      benefits: [
-        "Montáž obvykle do jednoho dne",
-        "Skryje nerovnosti a rozvody v původním stropu",
-        "Matné, lesklé i potištěné varianty",
-        "Dlouhá životnost a snadná údržba",
-      ],
-      faq: [
-        {
-          question: "Jak dlouho trvá montáž napínaného stropu?",
-          answer:
-            "Montáž běžné místnosti trvá zpravidla několik hodin až jeden den, v závislosti na velikosti a tvaru stropu.",
         },
       ],
     },
@@ -616,32 +589,6 @@ export const services: Record<Lang, ServiceContent[]> = {
       ],
     },
     {
-      slug: "napinane-stropy",
-      cardTitle: "Stretch ceilings",
-      h1: "Stretch ceilings in Brno – a modern ceiling system",
-      metaTitle: "Stretch ceilings Brno – turnkey installation | GRUJIČ CONSTRUCTION",
-      metaDescription:
-        "Stretch ceilings for apartments, houses and commercial spaces in Brno. Fast installation with no demolition, long service life and easy maintenance.",
-      imageKey: "ceiling",
-      intro: [
-        "We install stretch ceilings as a modern, fast alternative to classic drywall suspended ceilings. Installation in Brno is usually completed within a single day, with no need to move out of the property.",
-        "A stretch ceiling hides unevenness in the original ceiling as well as wiring and pipework, and comes in a wide range of finishes — matte, glossy and printed.",
-      ],
-      benefits: [
-        "Installation usually done in a single day",
-        "Hides unevenness and wiring in the original ceiling",
-        "Matte, glossy and printed finishes",
-        "Long service life and easy maintenance",
-      ],
-      faq: [
-        {
-          question: "How long does installing a stretch ceiling take?",
-          answer:
-            "Installation of a typical room usually takes a few hours to one day, depending on the size and shape of the ceiling.",
-        },
-      ],
-    },
-    {
       slug: "hydroizolacni-folie",
       cardTitle: "Waterproofing membranes",
       h1: "Waterproofing membranes in Brno – protection against water",
@@ -947,32 +894,6 @@ export const services: Record<Lang, ServiceContent[]> = {
           question: "Vykonávate aj terénne úpravy po výstavbe?",
           answer:
             "Áno, po dokončení stavby zabezpečíme aj finálne terénne úpravy a prípravu pozemku na záhradné úpravy.",
-        },
-      ],
-    },
-    {
-      slug: "napinane-stropy",
-      cardTitle: "Napínané stropy",
-      h1: "Napínané stropy Brno – moderné stropné systémy",
-      metaTitle: "Napínané stropy Brno – inštalácia na kľúč | GRUJIČ CONSTRUCTION",
-      metaDescription:
-        "Napínané stropy pre byty, domy aj komerčné priestory v Brne. Rýchla montáž bez nutnosti búrania, dlhá životnosť a jednoduchá údržba.",
-      imageKey: "ceiling",
-      intro: [
-        "Inštalujeme napínané stropy ako modernú a rýchlu alternatívu ku klasickým sadrokartónovým podhľadom. Montáž v Brne zvládneme zvyčajne počas jedného dňa bez nutnosti sťahovania celej domácnosti.",
-        "Napínaný strop skryje nerovnosti pôvodného stropu, elektroinštalácie aj rozvody, a ponúka širokú škálu povrchov – matný, lesklý aj s potlačou.",
-      ],
-      benefits: [
-        "Montáž zvyčajne do jedného dňa",
-        "Skryje nerovnosti a rozvody v pôvodnom strope",
-        "Matné, lesklé aj potlačené varianty",
-        "Dlhá životnosť a jednoduchá údržba",
-      ],
-      faq: [
-        {
-          question: "Ako dlho trvá montáž napínaného stropu?",
-          answer:
-            "Montáž bežnej miestnosti trvá spravidla niekoľko hodín až jeden deň, v závislosti od veľkosti a tvaru stropu.",
         },
       ],
     },

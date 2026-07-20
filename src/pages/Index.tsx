@@ -6,7 +6,7 @@ import SiteFooter from "../components/SiteFooter";
 import { images } from "../lib/images";
 import { business, SITE_URL, NOTIFY_EMAIL } from "../lib/business";
 import { services } from "../data/services";
-import { featuredProjects, moreProjects } from "../data/projects";
+import { featuredProjects } from "../data/projects";
 import { testimonials } from "../data/testimonials";
 import ProjectShowcase from "../components/ProjectShowcase";
 import { useLang } from "../contexts/LanguageContext";
@@ -146,34 +146,9 @@ export default function Index() {
               <p className="text-xl text-[#555555] font-light">{t.sections.projectsSubtitle}</p>
             </div>
 
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 mb-10 sm:mb-16">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
               {featuredProjects.map((p) => (
                 <ProjectShowcase key={p.name} name={p.name} imageKeys={p.images} />
-              ))}
-            </div>
-
-            <h3 className="text-2xl sm:text-3xl font-bold text-[#3a3a3a] mb-6 sm:mb-8">
-              {t.sections.moreProjects}
-            </h3>
-            <div className="grid grid-cols-2 lg:grid-cols-5 gap-3 sm:gap-6">
-              {moreProjects.map((p) => (
-                <Link
-                  key={p.slug}
-                  to={`/projekty/${p.slug}`}
-                  className="rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300"
-                >
-                  <div className="aspect-square overflow-hidden">
-                    <img
-                      src={images[p.image]}
-                      alt={p.name}
-                      loading="lazy"
-                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                    />
-                  </div>
-                  <div className="bg-white p-3">
-                    <h4 className="text-[#3a3a3a] font-medium text-xs sm:text-sm leading-snug">{p.name}</h4>
-                  </div>
-                </Link>
               ))}
             </div>
           </div>
@@ -185,7 +160,7 @@ export default function Index() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16">
               {/* Contact Info */}
               <div className="text-center flex flex-col items-center">
-                <img src={images.logo_new} alt="GRUJIČ CONSTRUCTION logo" className="h-24 mb-6 object-contain" />
+                <img src={images.logo} alt="GRUJIČ CONSTRUCTION logo" className="h-24 mb-6 object-contain" />
                 <h2 className="text-3xl md:text-4xl font-bold mb-4">{business.name}</h2>
                 <p className="text-[#D4A574] text-lg mb-8 font-light">{t.contact.tagline}</p>
 

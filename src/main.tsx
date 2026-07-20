@@ -5,7 +5,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./index.css";
 import Index from "./pages/Index";
 import ServicePage from "./pages/ServicePage";
-import ProjectPage from "./pages/ProjectPage";
 import TermsPage from "./pages/TermsPage";
 import PrivacyPage from "./pages/PrivacyPage";
 import NotFound from "./pages/NotFound";
@@ -28,7 +27,6 @@ createRoot(document.getElementById("root")!).render(
           <Route path="/" element={<Index />} />
           <Route path="/obchodni-podminky" element={<TermsPage />} />
           <Route path="/zasady-ochrany-osobnich-udaju" element={<PrivacyPage />} />
-          <Route path="/projekty/:slug" element={<ProjectPage />} />
           <Route path="/:slug" element={<ServicePage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
