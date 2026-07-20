@@ -30,23 +30,23 @@ export default function SiteHeader() {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-2 font-medium text-[#E43022]">
-          <Link to="/" className="px-4 py-2 hover:text-[#E43022]/70 transition-colors text-sm">
+        <nav className="hidden md:flex items-center gap-2 text-[#E43022]">
+          <Link to="/" className="px-4 py-2 hover:text-[#E43022]/70 transition-colors text-sm font-semibold [text-shadow:0_1px_2px_rgba(0,0,0,0.35)]">
             {t.nav.home}
           </Link>
-          <Link to="/#about" className="px-4 py-2 hover:text-[#E43022]/70 transition-colors text-sm">
+          <Link to="/#about" className="px-4 py-2 hover:text-[#E43022]/70 transition-colors text-sm font-semibold [text-shadow:0_1px_2px_rgba(0,0,0,0.35)]">
             {t.nav.about}
           </Link>
-          <Link to="/#services" className="px-4 py-2 hover:text-[#E43022]/70 transition-colors text-sm">
+          <Link to="/#services" className="px-4 py-2 hover:text-[#E43022]/70 transition-colors text-sm font-semibold [text-shadow:0_1px_2px_rgba(0,0,0,0.35)]">
             {t.nav.services}
           </Link>
-          <Link to="/#projects" className="px-4 py-2 hover:text-[#E43022]/70 transition-colors text-sm">
+          <Link to="/#projects" className="px-4 py-2 hover:text-[#E43022]/70 transition-colors text-sm font-semibold [text-shadow:0_1px_2px_rgba(0,0,0,0.35)]">
             {t.nav.projects}
           </Link>
-          <Link to="/#testimonials" className="px-4 py-2 hover:text-[#E43022]/70 transition-colors text-sm">
+          <Link to="/#testimonials" className="px-4 py-2 hover:text-[#E43022]/70 transition-colors text-sm font-semibold [text-shadow:0_1px_2px_rgba(0,0,0,0.35)]">
             {t.nav.reviews}
           </Link>
-          <Link to="/#contact" className="px-4 py-2 hover:text-[#E43022]/70 transition-colors text-sm">
+          <Link to="/#contact" className="px-4 py-2 hover:text-[#E43022]/70 transition-colors text-sm font-semibold [text-shadow:0_1px_2px_rgba(0,0,0,0.35)]">
             {t.nav.contact}
           </Link>
         </nav>
@@ -55,13 +55,13 @@ export default function SiteHeader() {
         <div className="hidden md:flex items-center gap-3">
           <Link
             to="/#contact"
-            className="bg-white/90 text-[#E43022] px-5 py-2 rounded-lg font-semibold text-sm hover:bg-white transition-colors"
+            className="bg-white/90 text-[#E43022] px-5 py-2 rounded-lg font-bold text-sm hover:bg-white transition-colors"
           >
             {t.nav.writeUs}
           </Link>
           <a
             href={`tel:${business.phone}`}
-            className="text-[#E43022] font-semibold text-sm hover:text-[#E43022]/70 transition-colors"
+            className="text-[#E43022] font-bold text-sm hover:text-[#E43022]/70 transition-colors [text-shadow:0_1px_2px_rgba(0,0,0,0.35)]"
           >
             {business.phoneDisplay}
           </a>
@@ -70,7 +70,7 @@ export default function SiteHeader() {
           <div className="relative">
             <button
               onClick={() => setLangOpen(!langOpen)}
-              className="flex items-center gap-1.5 bg-white/20 hover:bg-white/30 transition-colors px-3 py-1.5 rounded-lg text-[#E43022] text-sm font-semibold"
+              className="flex items-center gap-1.5 bg-white/20 hover:bg-white/30 transition-colors px-3 py-1.5 rounded-lg text-[#E43022] text-sm font-bold [text-shadow:0_1px_2px_rgba(0,0,0,0.35)]"
               aria-label="Change language"
             >
               <span>{currentLang.flag}</span>
@@ -105,7 +105,7 @@ export default function SiteHeader() {
           <div className="relative">
             <button
               onClick={() => setLangOpen(!langOpen)}
-              className="flex items-center gap-1 bg-white/20 px-2 py-1 rounded-lg text-[#E43022] text-xs font-semibold"
+              className="flex items-center gap-1 bg-white/20 px-2 py-1 rounded-lg text-[#E43022] text-xs font-bold [text-shadow:0_1px_2px_rgba(0,0,0,0.35)]"
             >
               <span>{currentLang.flag}</span>
               <span>{currentLang.label}</span>
@@ -145,35 +145,35 @@ export default function SiteHeader() {
       {mobileMenuOpen && (
         <div className="md:hidden bg-[#D4A574] border-t border-white/20">
           <div className="px-4 py-4 space-y-3">
-            <Link to="/" className="block text-[#E43022] py-2 hover:text-[#E43022]/70 transition-colors" onClick={() => setMobileMenuOpen(false)}>
+            <Link to="/" className="block text-[#E43022] py-2 hover:text-[#E43022]/70 transition-colors font-semibold [text-shadow:0_1px_2px_rgba(0,0,0,0.35)]" onClick={() => setMobileMenuOpen(false)}>
               {t.nav.home}
             </Link>
-            <Link to="/#about" className="block text-[#E43022] py-2 hover:text-[#E43022]/70 transition-colors" onClick={() => setMobileMenuOpen(false)}>
+            <Link to="/#about" className="block text-[#E43022] py-2 hover:text-[#E43022]/70 transition-colors font-semibold [text-shadow:0_1px_2px_rgba(0,0,0,0.35)]" onClick={() => setMobileMenuOpen(false)}>
               {t.nav.about}
             </Link>
-            <Link to="/#services" className="block text-[#E43022] py-2 hover:text-[#E43022]/70 transition-colors" onClick={() => setMobileMenuOpen(false)}>
+            <Link to="/#services" className="block text-[#E43022] py-2 hover:text-[#E43022]/70 transition-colors font-semibold [text-shadow:0_1px_2px_rgba(0,0,0,0.35)]" onClick={() => setMobileMenuOpen(false)}>
               {t.nav.services}
             </Link>
-            <Link to="/#projects" className="block text-[#E43022] py-2 hover:text-[#E43022]/70 transition-colors" onClick={() => setMobileMenuOpen(false)}>
+            <Link to="/#projects" className="block text-[#E43022] py-2 hover:text-[#E43022]/70 transition-colors font-semibold [text-shadow:0_1px_2px_rgba(0,0,0,0.35)]" onClick={() => setMobileMenuOpen(false)}>
               {t.nav.projects}
             </Link>
-            <Link to="/#testimonials" className="block text-[#E43022] py-2 hover:text-[#E43022]/70 transition-colors" onClick={() => setMobileMenuOpen(false)}>
+            <Link to="/#testimonials" className="block text-[#E43022] py-2 hover:text-[#E43022]/70 transition-colors font-semibold [text-shadow:0_1px_2px_rgba(0,0,0,0.35)]" onClick={() => setMobileMenuOpen(false)}>
               {t.nav.reviews}
             </Link>
-            <Link to="/#contact" className="block text-[#E43022] py-2 hover:text-[#E43022]/70 transition-colors" onClick={() => setMobileMenuOpen(false)}>
+            <Link to="/#contact" className="block text-[#E43022] py-2 hover:text-[#E43022]/70 transition-colors font-semibold [text-shadow:0_1px_2px_rgba(0,0,0,0.35)]" onClick={() => setMobileMenuOpen(false)}>
               {t.nav.contact}
             </Link>
             <div className="flex flex-col gap-2 pt-2">
               <Link
                 to="/#contact"
-                className="w-full bg-white/90 text-[#E43022] px-4 py-2 rounded-lg font-semibold text-sm hover:bg-white transition-colors text-center"
+                className="w-full bg-white/90 text-[#E43022] px-4 py-2 rounded-lg font-bold text-sm hover:bg-white transition-colors text-center"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {t.nav.writeUs}
               </Link>
               <a
                 href={`tel:${business.phone}`}
-                className="w-full text-[#E43022] text-center font-semibold text-sm"
+                className="w-full text-[#E43022] text-center font-bold text-sm [text-shadow:0_1px_2px_rgba(0,0,0,0.35)]"
               >
                 {business.phoneDisplay}
               </a>
