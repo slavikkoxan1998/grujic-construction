@@ -31,22 +31,22 @@ export default function SiteHeader() {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-2 text-[#E43022]">
-          <Link to="/" className="px-4 py-2 hover:text-[#E43022]/70 transition-colors text-sm font-semibold [text-shadow:0_1px_2px_rgba(0,0,0,0.35)]">
+          <Link to="/" className="px-4 py-2 hover:text-[#E43022]/70 transition-colors text-base font-semibold [text-shadow:0_1px_2px_rgba(0,0,0,0.35)]">
             {t.nav.home}
           </Link>
-          <Link to="/#about" className="px-4 py-2 hover:text-[#E43022]/70 transition-colors text-sm font-semibold [text-shadow:0_1px_2px_rgba(0,0,0,0.35)]">
+          <Link to="/#about" className="px-4 py-2 hover:text-[#E43022]/70 transition-colors text-base font-semibold [text-shadow:0_1px_2px_rgba(0,0,0,0.35)]">
             {t.nav.about}
           </Link>
-          <Link to="/#services" className="px-4 py-2 hover:text-[#E43022]/70 transition-colors text-sm font-semibold [text-shadow:0_1px_2px_rgba(0,0,0,0.35)]">
+          <Link to="/#services" className="px-4 py-2 hover:text-[#E43022]/70 transition-colors text-base font-semibold [text-shadow:0_1px_2px_rgba(0,0,0,0.35)]">
             {t.nav.services}
           </Link>
-          <Link to="/#projects" className="px-4 py-2 hover:text-[#E43022]/70 transition-colors text-sm font-semibold [text-shadow:0_1px_2px_rgba(0,0,0,0.35)]">
+          <Link to="/#projects" className="px-4 py-2 hover:text-[#E43022]/70 transition-colors text-base font-semibold [text-shadow:0_1px_2px_rgba(0,0,0,0.35)]">
             {t.nav.projects}
           </Link>
-          <Link to="/#testimonials" className="px-4 py-2 hover:text-[#E43022]/70 transition-colors text-sm font-semibold [text-shadow:0_1px_2px_rgba(0,0,0,0.35)]">
+          <Link to="/#testimonials" className="px-4 py-2 hover:text-[#E43022]/70 transition-colors text-base font-semibold [text-shadow:0_1px_2px_rgba(0,0,0,0.35)]">
             {t.nav.reviews}
           </Link>
-          <Link to="/#contact" className="px-4 py-2 hover:text-[#E43022]/70 transition-colors text-sm font-semibold [text-shadow:0_1px_2px_rgba(0,0,0,0.35)]">
+          <Link to="/#contact" className="px-4 py-2 hover:text-[#E43022]/70 transition-colors text-base font-semibold [text-shadow:0_1px_2px_rgba(0,0,0,0.35)]">
             {t.nav.contact}
           </Link>
         </nav>
@@ -55,13 +55,13 @@ export default function SiteHeader() {
         <div className="hidden md:flex items-center gap-3">
           <Link
             to="/#contact"
-            className="bg-white/90 text-[#E43022] px-5 py-2 rounded-lg font-bold text-sm hover:bg-white transition-colors"
+            className="bg-white/90 text-[#E43022] px-5 py-2 rounded-lg font-bold text-base hover:bg-white transition-colors"
           >
             {t.nav.writeUs}
           </Link>
           <a
             href={`tel:${business.phone}`}
-            className="text-[#E43022] font-bold text-sm hover:text-[#E43022]/70 transition-colors [text-shadow:0_1px_2px_rgba(0,0,0,0.35)]"
+            className="text-[#E43022] font-bold text-base hover:text-[#E43022]/70 transition-colors [text-shadow:0_1px_2px_rgba(0,0,0,0.35)]"
           >
             {business.phoneDisplay}
           </a>
@@ -70,7 +70,7 @@ export default function SiteHeader() {
           <div className="relative">
             <button
               onClick={() => setLangOpen(!langOpen)}
-              className="flex items-center gap-1.5 bg-white/20 hover:bg-white/30 transition-colors px-3 py-1.5 rounded-lg text-[#E43022] text-sm font-bold [text-shadow:0_1px_2px_rgba(0,0,0,0.35)]"
+              className="flex items-center gap-1.5 bg-white/20 hover:bg-white/30 transition-colors px-3 py-1.5 rounded-lg text-[#E43022] text-base font-bold [text-shadow:0_1px_2px_rgba(0,0,0,0.35)]"
               aria-label="Change language"
             >
               <span>{currentLang.flag}</span>
