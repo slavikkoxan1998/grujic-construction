@@ -56,6 +56,26 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://slavikkoxan1998.github.io/grujic-construction/projekty/rodinny-dum-brno-bystrc</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://slavikkoxan1998.github.io/grujic-construction/projekty/zatepleni-fasady-zabovresky</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://slavikkoxan1998.github.io/grujic-construction/projekty/rekonstrukce-koupelny-kralovo-pole</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://slavikkoxan1998.github.io/grujic-construction/projekty/kancelar-brno-stred</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://slavikkoxan1998.github.io/grujic-construction/obchodni-podminky</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>

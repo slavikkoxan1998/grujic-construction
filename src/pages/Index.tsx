@@ -148,7 +148,9 @@ export default function Index() {
 
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
               {featuredProjects.map((p) => (
-                <ProjectShowcase key={p.name} name={p.name} imageKeys={p.images} />
+                <Link key={p.slug} to={`/projekty/${p.slug}`} className="block">
+                  <ProjectShowcase name={p.name} imageKeys={p.images} />
+                </Link>
               ))}
             </div>
           </div>
