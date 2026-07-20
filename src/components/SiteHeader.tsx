@@ -31,7 +31,7 @@ export default function SiteHeader() {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-2 text-[#E43022]">
-          <Link to="/" className="px-4 py-2 hover:text-[#E43022]/70 transition-colors text-base font-semibold [text-shadow:-1px_-1px_0_#FBBF24,1px_-1px_0_#FBBF24,-1px_1px_0_#FBBF24,1px_1px_0_#FBBF24,0_2px_3px_rgba(0,0,0,0.35)]">
+          <Link to="/" className="px-4 py-2 text-[#EF1C0A] hover:text-[#EF1C0A]/70 transition-colors text-base font-extrabold [text-shadow:-1px_-1px_0_#FBBF24,1px_-1px_0_#FBBF24,-1px_1px_0_#FBBF24,1px_1px_0_#FBBF24,0_2px_3px_rgba(0,0,0,0.35)]">
             {t.nav.home}
           </Link>
           <Link to="/#about" className="px-4 py-2 hover:text-[#E43022]/70 transition-colors text-base font-semibold [text-shadow:0_1px_2px_rgba(0,0,0,0.35)]">
@@ -145,7 +145,7 @@ export default function SiteHeader() {
       {mobileMenuOpen && (
         <div className="md:hidden bg-[#D4A574] border-t border-white/20">
           <div className="px-4 py-2">
-            <Link to="/" className="block text-[#E43022] py-3.5 border-b border-white/15 hover:text-[#E43022]/70 transition-colors font-semibold [text-shadow:-1px_-1px_0_#FBBF24,1px_-1px_0_#FBBF24,-1px_1px_0_#FBBF24,1px_1px_0_#FBBF24,0_2px_3px_rgba(0,0,0,0.35)]" onClick={() => setMobileMenuOpen(false)}>
+            <Link to="/" className="block text-[#EF1C0A] py-3.5 border-b border-white/15 hover:text-[#EF1C0A]/70 transition-colors font-extrabold [text-shadow:-1px_-1px_0_#FBBF24,1px_-1px_0_#FBBF24,-1px_1px_0_#FBBF24,1px_1px_0_#FBBF24,0_2px_3px_rgba(0,0,0,0.35)]" onClick={() => setMobileMenuOpen(false)}>
               {t.nav.home}
             </Link>
             <Link to="/#about" className="block text-[#E43022] py-3.5 border-b border-white/15 hover:text-[#E43022]/70 transition-colors font-semibold [text-shadow:0_1px_2px_rgba(0,0,0,0.35)]" onClick={() => setMobileMenuOpen(false)}>
