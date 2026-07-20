@@ -123,7 +123,7 @@ export default function Index() {
               <p className="text-xl text-[#555555] font-light">{t.sections.servicesSubtitle}</p>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6 md:gap-8">
+            <div className="grid grid-cols-2 lg:grid-cols-5 gap-3 sm:gap-6 lg:gap-5">
               {langServices.map((s) => (
                 <ServiceCard
                   key={s.slug}
@@ -363,7 +363,7 @@ function ServiceCard({
       to={`/${slug}`}
       className="group flex flex-col bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-[#eee] h-full"
     >
-      <div className="h-28 sm:h-40 md:h-64 overflow-hidden relative">
+      <div className="h-28 sm:h-40 md:h-64 lg:h-32 xl:h-40 overflow-hidden relative">
         <img
           src={image}
           alt={title}
@@ -371,8 +371,8 @@ function ServiceCard({
           loading="lazy"
         />
       </div>
-      <div className="p-3 sm:p-5 md:p-6 flex flex-col flex-1">
-        <h3 className="text-[#D4A574] text-sm sm:text-lg md:text-xl font-bold mb-1.5 sm:mb-3">{title}</h3>
+      <div className="p-3 sm:p-5 md:p-6 lg:p-3 xl:p-4 flex flex-col flex-1">
+        <h3 className="text-[#D4A574] text-sm sm:text-lg md:text-xl lg:text-sm xl:text-base font-bold mb-1.5 sm:mb-3">{title}</h3>
         <p className="text-[#555555] text-xs sm:text-sm leading-relaxed line-clamp-3">{description}</p>
         <span className="mt-auto pt-2 text-[#D4A574] text-xs sm:text-sm font-semibold group-hover:underline">
           {learnMore}

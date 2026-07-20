@@ -18,7 +18,6 @@ export interface ServiceContent {
     | "drywall"
     | "tiles"
     | "painting"
-    | "plumbing"
     | "demolition"
     | "earthworks"
     | "foil"
@@ -198,32 +197,6 @@ export const services: Record<Lang, ServiceContent[]> = {
           question: "Malujete i společné prostory bytových domů?",
           answer:
             "Ano, realizujeme malby a nátěry chodeb, schodišť a dalších společných prostor bytových domů a SVJ.",
-        },
-      ],
-    },
-    {
-      slug: "vodoinstalaterske-prace",
-      cardTitle: "Vodoinstalatérské práce",
-      h1: "Vodoinstalatérské a topenářské práce Brno",
-      metaTitle: "Vodoinstalatérské práce Brno – rozvody vody a topení | GRUJIČ CONSTRUCTION",
-      metaDescription:
-        "Vodoinstalatérské a topenářské práce v Brně – nové rozvody, rekonstrukce koupelen, připojení spotřebičů. Profesionální instalace na klíč.",
-      imageKey: "plumbing",
-      intro: [
-        "Zajišťujeme kompletní vodoinstalatérské a topenářské práce v Brně – od nových rozvodů vody a topení po připojení sanitární techniky a spotřebičů.",
-        "Práce provádíme jak v rámci nové výstavby, tak při rekonstrukcích koupelen a kuchyní, kde je potřeba upravit stávající rozvody podle nové dispozice.",
-      ],
-      benefits: [
-        "Nové rozvody vody a topení",
-        "Připojení sanitární techniky a spotřebičů",
-        "Rekonstrukce rozvodů v bytech a domech",
-        "Součást komplexní rekonstrukce koupelen",
-      ],
-      faq: [
-        {
-          question: "Provádíte i drobné opravy, nebo jen celé rozvody?",
-          answer:
-            "Realizujeme jak kompletní nové rozvody, tak dílčí opravy a úpravy stávající instalace.",
         },
       ],
     },
@@ -511,32 +484,6 @@ export const services: Record<Lang, ServiceContent[]> = {
       ],
     },
     {
-      slug: "vodoinstalaterske-prace",
-      cardTitle: "Plumbing & heating",
-      h1: "Plumbing and heating work in Brno",
-      metaTitle: "Plumbing Brno – water and heating installations | GRUJIČ CONSTRUCTION",
-      metaDescription:
-        "Plumbing and heating work in Brno — new pipework, bathroom renovations, appliance hookups. Professional turnkey installation.",
-      imageKey: "plumbing",
-      intro: [
-        "We provide complete plumbing and heating work in Brno — from new water and heating pipework to connecting sanitary fixtures and appliances.",
-        "We carry out this work both for new builds and for bathroom and kitchen renovations, where existing pipework needs to be adapted to a new layout.",
-      ],
-      benefits: [
-        "New water and heating pipework",
-        "Connection of sanitary fixtures and appliances",
-        "Renovation of pipework in apartments and houses",
-        "Part of a complete bathroom renovation",
-      ],
-      faq: [
-        {
-          question: "Do you also handle small repairs, or only full pipework installs?",
-          answer:
-            "We do both complete new installations and partial repairs or adjustments to existing plumbing.",
-        },
-      ],
-    },
-    {
       slug: "demolice",
       cardTitle: "Demolition",
       h1: "Demolition work in Brno – tearing down structures",
@@ -816,32 +763,6 @@ export const services: Record<Lang, ServiceContent[]> = {
           question: "Maľujete aj spoločné priestory bytových domov?",
           answer:
             "Áno, realizujeme maľby a nátery chodieb, schodísk a ďalších spoločných priestorov bytových domov a spoločenstiev vlastníkov.",
-        },
-      ],
-    },
-    {
-      slug: "vodoinstalaterske-prace",
-      cardTitle: "Vodoinštalatérske práce",
-      h1: "Vodoinštalatérske a kúrenárske práce Brno",
-      metaTitle: "Vodoinštalatérske práce Brno – rozvody vody a kúrenia | GRUJIČ CONSTRUCTION",
-      metaDescription:
-        "Vodoinštalatérske a kúrenárske práce v Brne – nové rozvody, rekonštrukcie kúpeľní, pripojenie spotrebičov. Profesionálna inštalácia na kľúč.",
-      imageKey: "plumbing",
-      intro: [
-        "Zabezpečujeme kompletné vodoinštalatérske a kúrenárske práce v Brne – od nových rozvodov vody a kúrenia po pripojenie sanitárnej techniky a spotrebičov.",
-        "Práce vykonávame tak v rámci novej výstavby, ako aj pri rekonštrukciách kúpeľní a kuchýň, kde je potrebné upraviť existujúce rozvody podľa novej dispozície.",
-      ],
-      benefits: [
-        "Nové rozvody vody a kúrenia",
-        "Pripojenie sanitárnej techniky a spotrebičov",
-        "Rekonštrukcia rozvodov v bytoch a domoch",
-        "Súčasť komplexnej rekonštrukcie kúpeľní",
-      ],
-      faq: [
-        {
-          question: "Vykonávate aj drobné opravy, alebo len celé rozvody?",
-          answer:
-            "Realizujeme kompletné nové rozvody aj čiastkové opravy a úpravy existujúcej inštalácie.",
         },
       ],
     },
