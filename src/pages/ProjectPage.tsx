@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet-async";
 import SiteHeader from "../components/SiteHeader";
 import SiteFooter from "../components/SiteFooter";
 import { getProjectBySlug } from "../data/projects";
-import { images } from "../lib/images";
+import { projectImage } from "../lib/images";
 import { SITE_URL } from "../lib/business";
 import { useLang } from "../contexts/LanguageContext";
 
@@ -19,9 +19,7 @@ export default function ProjectPage() {
   }
 
   const pageUrl = `${SITE_URL}/projekty/${project.slug}`;
-  const galleryImages = project.images
-    .map((k) => (images as Record<string, string>)[k])
-    .filter(Boolean);
+  const galleryImages = project.images.map(projectImage);
   const heroImage = galleryImages[0];
 
   const breadcrumbSchema = {
@@ -69,7 +67,12 @@ export default function ProjectPage() {
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#3a3a3a] mb-3">
             {project.name}
           </h1>
-          <p className="text-lg text-[#D4A574] font-medium mb-8">{project.location}</p>
+          <p className="text-lg text-[#D4A574] font-medium mb-6">{project.location}</p>
+          {project.description && (
+            <p className="text-base sm:text-lg text-[#555] leading-relaxed max-w-4xl mb-8">
+              {project.description}
+            </p>
+          )}
           <img
             src={heroImage}
             alt={project.name}

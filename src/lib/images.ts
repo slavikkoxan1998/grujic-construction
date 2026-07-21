@@ -27,3 +27,7 @@ export const images = {
   project3: `${base}images/project3.webp`,
   project4: `${base}images/project4.webp`,
 };
+
+// Real client project photos live in public/images/projects/<slug>/NN.webp;
+// featuredProjects.images holds paths relative to that folder.
+export const projectImage = (path: string) => `${base}images/projects/${path}`;

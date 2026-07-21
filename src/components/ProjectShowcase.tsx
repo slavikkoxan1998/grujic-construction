@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { images } from "../lib/images";
+import { projectImage } from "../lib/images";
 
 interface ProjectShowcaseProps {
   name: string;
@@ -7,9 +7,7 @@ interface ProjectShowcaseProps {
 }
 
 export default function ProjectShowcase({ name, imageKeys }: ProjectShowcaseProps) {
-  const resolved = imageKeys
-    .map((k) => (images as Record<string, string>)[k])
-    .filter(Boolean);
+  const resolved = imageKeys.map(projectImage);
   const multi = resolved.length > 1;
   const [index, setIndex] = useState(0);
 
