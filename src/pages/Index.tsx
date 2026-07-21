@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import SiteHeader from "../components/SiteHeader";
@@ -38,8 +38,20 @@ export default function Index() {
   const langServices = services[lang];
   const meta = HOME_META[lang];
 
-  // Support cross-page anchor links like <Link to="/#contact">
+  // Support cross-page anchor links like <Link to="/#contact">.
+  // A stale hash left in the URL from a previous visit must NOT scroll
+  // the page on a plain refresh - so the initial load strips it and
+  // stays at the top; only in-app navigation scrolls to the anchor.
+  const isInitialLoad = useRef(true);
   useEffect(() => {
+    if (isInitialLoad.current) {
+      isInitialLoad.current = false;
+      if (location.hash) {
+        window.history.replaceState(null, "", location.pathname);
+        window.scrollTo({ top: 0, behavior: "instant" });
+      }
+      return;
+    }
     if (location.hash) {
       const el = document.getElementById(location.hash.replace("#", ""));
       if (el) {
