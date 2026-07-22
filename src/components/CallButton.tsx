@@ -8,7 +8,7 @@ export default function CallButton() {
       className="fixed bottom-5 right-5 z-50 w-14 h-14 rounded-full bg-[#D4A574] shadow-xl flex items-center justify-center hover:bg-[#C89860] transition-colors animate-[pulse_2.5s_ease-in-out_infinite]"
     >
       <svg
-        className="w-7 h-7 text-white"
+        className="w-7 h-7 text-[#CD1D14]"
         fill="currentColor"
         viewBox="0 0 24 24"
         aria-hidden="true"

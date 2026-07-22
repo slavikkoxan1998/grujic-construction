@@ -47,7 +47,7 @@ export default function ProjectShowcase({ name, imageKeys }: ProjectShowcaseProp
               onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && go(e, -1)}
               className="absolute inset-y-0 left-0 w-1/2 flex items-center justify-start pl-2 opacity-0 group-hover:opacity-100 focus:opacity-100 transition-opacity cursor-pointer outline-none"
             >
-              <span className="w-8 h-8 rounded-full bg-black/40 text-white flex items-center justify-center text-lg leading-none">
+              <span className="w-8 h-8 rounded-full bg-black/40 text-[#CD1D14] flex items-center justify-center text-lg leading-none">
                 ‹
               </span>
             </div>
@@ -59,7 +59,7 @@ export default function ProjectShowcase({ name, imageKeys }: ProjectShowcaseProp
               onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && go(e, 1)}
               className="absolute inset-y-0 right-0 w-1/2 flex items-center justify-end pr-2 opacity-0 group-hover:opacity-100 focus:opacity-100 transition-opacity cursor-pointer outline-none"
             >
-              <span className="w-8 h-8 rounded-full bg-black/40 text-white flex items-center justify-center text-lg leading-none">
+              <span className="w-8 h-8 rounded-full bg-black/40 text-[#CD1D14] flex items-center justify-center text-lg leading-none">
                 ›
               </span>
             </div>

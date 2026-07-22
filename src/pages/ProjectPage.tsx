@@ -128,7 +128,7 @@ export default function ProjectPage() {
             </Link>
             <Link
               to="/#contact"
-              className="inline-block bg-[#D4A574] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#C89860] transition-colors"
+              className="inline-block bg-[#D4A574] text-[#CD1D14] px-8 py-4 rounded-lg font-semibold hover:bg-[#C89860] transition-colors"
             >
               {t.project.inquiry}
             </Link>

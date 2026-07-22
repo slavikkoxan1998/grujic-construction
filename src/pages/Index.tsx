@@ -89,15 +89,15 @@ export default function Index() {
 
           <div className="relative z-10 w-full max-w-7xl mx-auto px-4 md:px-8 py-12 sm:py-16 md:py-24">
             <div className="max-w-2xl">
-              <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 md:mb-6 leading-tight">
+              <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-[#CD1D14] mb-4 md:mb-6 leading-tight">
                 {t.hero.h1}
               </h1>
-              <p className="text-base sm:text-lg md:text-2xl text-white/90 mb-6 sm:mb-8 md:mb-10 font-light">
+              <p className="text-base sm:text-lg md:text-2xl text-[#CD1D14]/90 mb-6 sm:mb-8 md:mb-10 font-light">
                 {t.hero.subtitle}
               </p>
               <a
                 href="#contact"
-                className="inline-block bg-[#D4A574] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#C89860] transition-colors text-lg"
+                className="inline-block bg-[#D4A574] text-[#CD1D14] px-8 py-4 rounded-lg font-semibold hover:bg-[#C89860] transition-colors text-lg"
               >
                 {t.hero.cta}
               </a>
@@ -169,7 +169,7 @@ export default function Index() {
         </section>
 
         {/* Contact Section */}
-        <section id="contact" className="py-12 sm:py-16 md:py-32 bg-[#3a3a3a] text-white">
+        <section id="contact" className="py-12 sm:py-16 md:py-32 bg-[#3a3a3a] text-[#CD1D14]">
           <div className="max-w-7xl mx-auto px-4 md:px-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16">
               {/* Contact Info */}
@@ -189,12 +189,12 @@ export default function Index() {
                   <div>
                     <h3 className="text-[#D4A574] font-semibold text-sm mb-2">{t.contact.contactLabel}</h3>
                     <p className="text-[#D4A574]/90">
-                      <a href={`tel:${business.phone}`} className="hover:text-white transition-colors">
+                      <a href={`tel:${business.phone}`} className="hover:text-[#CD1D14] transition-colors">
                         {t.contact.phone}: {business.phoneDisplay}
                       </a>
                     </p>
                     <p className="text-[#D4A574]/90">
-                      <a href={`mailto:${business.email}`} className="hover:text-white transition-colors">
+                      <a href={`mailto:${business.email}`} className="hover:text-[#CD1D14] transition-colors">
                         {t.contact.email}: {business.email}
                       </a>
                     </p>
@@ -242,7 +242,7 @@ export default function Index() {
               {/* Contact Form — standard POST */}
               <div className="bg-white/5 p-6 sm:p-8 md:p-10 rounded-xl border border-white/10">
                 <h3 className="text-2xl md:text-3xl font-bold mb-2">{t.form.title}</h3>
-                <p className="text-white/60 text-sm mb-8">
+                <p className="text-[#CD1D14]/60 text-sm mb-8">
                   ✉{" "}
                   <a href={`mailto:${business.email}`} className="text-amber-400 hover:text-amber-300 transition-colors">
                     {business.email}
@@ -290,7 +290,7 @@ export default function Index() {
 
                   <button
                     type="submit"
-                    className="w-full bg-[#D4A574] text-white py-3 rounded-lg font-semibold hover:bg-[#C89860] transition-colors"
+                    className="w-full bg-[#D4A574] text-[#CD1D14] py-3 rounded-lg font-semibold hover:bg-[#C89860] transition-colors"
                   >
                     {t.form.send}
                   </button>
@@ -342,7 +342,7 @@ export default function Index() {
                 href="https://www.google.com/maps/search/?api=1&query=GRUJI%C4%8C+CONSTRUCTION+s.r.o.+K%C3%B6rnerova+455%2F7+Brno"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-[#D4A574] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#C89860] transition-colors"
+                className="inline-flex items-center gap-2 bg-[#D4A574] text-[#CD1D14] px-8 py-3 rounded-lg font-semibold hover:bg-[#C89860] transition-colors"
               >
                 <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M12 1.5l3.09 6.26 6.91 1-5 4.87 1.18 6.87L12 17.27l-6.18 3.23L7 13.63l-5-4.87 6.91-1z" />
