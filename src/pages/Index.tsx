@@ -89,10 +89,10 @@ export default function Index() {
 
           <div className="relative z-10 w-full max-w-7xl mx-auto px-4 md:px-8 py-12 sm:py-16 md:py-24">
             <div className="max-w-2xl">
-              <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-[#CD1D14] mb-4 md:mb-6 leading-tight">
+              <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 md:mb-6 leading-tight">
                 {t.hero.h1}
               </h1>
-              <p className="text-base sm:text-lg md:text-2xl text-[#CD1D14]/90 mb-6 sm:mb-8 md:mb-10 font-light">
+              <p className="text-base sm:text-lg md:text-2xl text-white/90 mb-6 sm:mb-8 md:mb-10 font-light">
                 {t.hero.subtitle}
               </p>
               <a
