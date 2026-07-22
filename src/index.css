@@ -6,7 +6,9 @@
     margin: 0;
     padding: 0;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
-    overflow-x: hidden;
+    /* clip (not hidden): hidden would turn body into a scroll container
+       and break position:sticky on the site header */
+    overflow-x: clip;
   }
 }
 
