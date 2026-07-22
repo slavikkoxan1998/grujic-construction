@@ -13,6 +13,31 @@ import { useLang } from "../contexts/LanguageContext";
 
 const OG_LOCALE: Record<string, string> = { cs: "cs_CZ", en: "en_US", sk: "sk_SK" };
 
+// Icons for the "how we work" steps, in step order - language-independent,
+// so they live outside the translation data.
+const PROCESS_ICONS = [
+  // 1. Poptávka - chat bubble
+  <svg key="0" className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={1.8} viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M21 12c0 4.418-4.03 8-9 8a9.86 9.86 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+  </svg>,
+  // 2. Konzultace a nabídka - clipboard with check
+  <svg key="1" className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={1.8} viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+  </svg>,
+  // 3. Smlouva a záloha - signed document
+  <svg key="2" className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={1.8} viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h4m3 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+  </svg>,
+  // 4. Realizace - wrench
+  <svg key="3" className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={1.8} viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085" />
+  </svg>,
+  // 5. Předání a doplatek - check circle
+  <svg key="4" className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={1.8} viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+  </svg>,
+];
+
 const HOME_META: Record<string, { title: string; description: string }> = {
   cs: {
     title: "GRUJIČ CONSTRUCTION – Stavební firma Brno | Rekonstrukce, zateplení, výstavba domů",
@@ -135,18 +160,38 @@ export default function Index() {
               <p className="text-xl text-[#555555] font-light">{t.process.subtitle}</p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
               {t.process.steps.map((step, i) => (
-                <div key={step.title} className="relative flex flex-col items-start">
-                  <div className="w-12 h-12 rounded-full bg-[#D4A574] text-[#CD1D14] font-bold text-lg flex items-center justify-center mb-4 flex-shrink-0">
-                    {i + 1}
+                <div
+                  key={step.title}
+                  className="relative bg-white rounded-xl border border-[#eee] shadow-md hover:shadow-xl transition-all duration-300 p-6 flex flex-col"
+                >
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-12 h-12 rounded-full bg-[#D4A574]/15 text-[#D4A574] flex items-center justify-center flex-shrink-0">
+                      {PROCESS_ICONS[i]}
+                    </div>
+                    <div>
+                      <span className="text-xs font-bold text-[#CD1D14] uppercase tracking-wide">
+                        {i + 1}/{t.process.steps.length}
+                      </span>
+                      <h3 className="text-lg font-semibold text-[#3a3a3a] leading-tight">{step.title}</h3>
+                    </div>
                   </div>
-                  {/* Connector line to the next step (desktop only, not after the last) */}
-                  {i < t.process.steps.length - 1 && (
-                    <div className="hidden lg:block absolute top-6 left-12 w-full h-0.5 bg-[#D4A574]/30" />
-                  )}
-                  <h3 className="text-lg font-semibold text-[#3a3a3a] mb-2">{step.title}</h3>
-                  <p className="text-[#555555] leading-relaxed">{step.text}</p>
+
+                  <span className="inline-block w-fit text-xs font-semibold text-[#D4A574] bg-[#D4A574]/10 rounded-full px-3 py-1 mb-3">
+                    {step.duration}
+                  </span>
+
+                  <p className="text-[#555555] leading-relaxed mb-4">{step.text}</p>
+
+                  <ul className="space-y-2 mt-auto pt-2">
+                    {step.bullets.map((b) => (
+                      <li key={b} className="flex items-start gap-2 text-sm text-[#555555]">
+                        <span className="text-[#D4A574] font-bold mt-0.5 flex-shrink-0">✓</span>
+                        <span>{b}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               ))}
             </div>

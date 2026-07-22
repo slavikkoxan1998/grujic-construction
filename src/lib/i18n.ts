@@ -6,6 +6,7 @@ export const translations = {
     nav: {
       home: "Domů",
       about: "O nás",
+      process: "Jak pracujeme",
       services: "Služby",
       projects: "Projekty",
       reviews: "Recenze",
@@ -41,23 +42,53 @@ export const translations = {
       steps: [
         {
           title: "Poptávka",
-          text: "Ozvete se nám telefonicky, SMS, e-mailem nebo přes kontaktní formulář na webu — stačí pár slov o vašem záměru.",
+          duration: "obvykle do 24 hodin",
+          text: "Ozvete se nám telefonicky, SMS, e-mailem nebo přes kontaktní formulář na webu. Stačí pár slov o vašem záměru, lokalitě a přibližném rozsahu prací — zbytek doladíme společně.",
+          bullets: [
+            "Odpovídáme obvykle do 24 hodin",
+            "Domluvíme si termín prohlídky na místě",
+            "Bez závazků a bez poplatků",
+          ],
         },
         {
           title: "Konzultace a nabídka",
-          text: "Probereme rozsah prací, prohlédneme místo realizace a připravíme nezávaznou cenovou nabídku.",
+          duration: "1–3 dny",
+          text: "Přijedeme na místo realizace, probereme vaše představy a technické možnosti. Na základě prohlídky připravíme nezávaznou cenovou nabídku s rozpisem prací.",
+          bullets: [
+            "Osobní prohlídka místa realizace",
+            "Návrh rozsahu a postupu prací",
+            "Písemná cenová nabídka zdarma",
+          ],
         },
         {
           title: "Smlouva a záloha",
-          text: "Po odsouhlasení podmínek podepíšeme smlouvu o dílo a přijmeme zálohu na zahájení prací.",
+          duration: "v den podpisu",
+          text: "Po odsouhlasení podmínek podepíšeme smlouvu o dílo s jasně daným rozsahem, cenou a termíny. Přijmeme zálohu, která nám umožní zahájit přípravu a nákup materiálu.",
+          bullets: [
+            "Smlouva o dílo s jasnou cenou a rozsahem",
+            "Záloha na zahájení prací",
+            "Domluva přesného termínu zahájení",
+          ],
         },
         {
           title: "Realizace",
-          text: "Provedeme dohodnuté práce v dohodnutém termínu a průběžně vás informujeme o postupu.",
+          duration: "dle rozsahu prací",
+          text: "Provedeme dohodnuté práce v domluveném termínu s důrazem na kvalitu a čistotu na staveništi. Průběžně vás informujeme o postupu a případných změnách.",
+          bullets: [
+            "Práce dle domluveného harmonogramu",
+            "Průběžná fotodokumentace postupu",
+            "Kvalitní materiály a zkušený tým",
+          ],
         },
         {
           title: "Předání a doplatek",
-          text: "Dílo předáme, podepíšeme předávací protokol, uhradíte doplatek — hotovo.",
+          duration: "po dokončení",
+          text: "Po dokončení provedeme finální kontrolu a úklid místa realizace. Dílo předáme, podepíšeme předávací protokol a uhradíte zbývající doplatek.",
+          bullets: [
+            "Finální kontrola kvality a úklid",
+            "Podpis předávacího protokolu",
+            "Doplatek a záruka na provedené práce",
+          ],
         },
       ],
     },
@@ -131,6 +162,7 @@ export const translations = {
     nav: {
       home: "Home",
       about: "About us",
+      process: "How we work",
       services: "Services",
       projects: "Projects",
       reviews: "Reviews",
@@ -163,23 +195,53 @@ export const translations = {
       steps: [
         {
           title: "Inquiry",
-          text: "Reach out by phone, SMS, e-mail or the contact form on the website — just a few words about what you need.",
+          duration: "usually within 24 hours",
+          text: "Reach out by phone, SMS, e-mail or the contact form on the website. Just a few words about what you need, the location and rough scope — we'll sort out the rest together.",
+          bullets: [
+            "We usually reply within 24 hours",
+            "We arrange a time for an on-site visit",
+            "No commitment, no fees",
+          ],
         },
         {
           title: "Consultation & quote",
-          text: "We discuss the scope of work, inspect the site, and prepare a non-binding price quote.",
+          duration: "1–3 days",
+          text: "We visit the site, discuss what you have in mind and the technical possibilities. Based on the visit we prepare a non-binding price quote with an itemized breakdown.",
+          bullets: [
+            "In-person inspection of the site",
+            "Proposed scope and sequence of work",
+            "Written price quote, free of charge",
+          ],
         },
         {
           title: "Contract & deposit",
-          text: "Once terms are agreed, we sign the works contract and take a deposit to begin work.",
+          duration: "on the day of signing",
+          text: "Once terms are agreed, we sign a works contract with a clearly defined scope, price and timeline. We take a deposit that lets us start preparation and buy materials.",
+          bullets: [
+            "Works contract with a clear price and scope",
+            "Deposit to begin the work",
+            "Agreeing on the exact start date",
+          ],
         },
         {
           title: "Execution",
-          text: "We carry out the agreed work within the agreed timeframe, keeping you updated on progress.",
+          duration: "depends on scope",
+          text: "We carry out the agreed work within the agreed timeframe, with an emphasis on quality and a clean site. We keep you updated on progress and any changes along the way.",
+          bullets: [
+            "Work follows the agreed schedule",
+            "Ongoing photo documentation of progress",
+            "Quality materials and an experienced team",
+          ],
         },
         {
           title: "Handover & final payment",
-          text: "We hand over the finished work, sign the handover protocol, you pay the balance — done.",
+          duration: "once finished",
+          text: "Once finished, we do a final quality check and clean the site. We hand over the work, sign the handover protocol, and you pay the remaining balance.",
+          bullets: [
+            "Final quality check and cleanup",
+            "Signing the handover protocol",
+            "Final payment and warranty on the work",
+          ],
         },
       ],
     },
@@ -246,6 +308,7 @@ export const translations = {
     nav: {
       home: "Domov",
       about: "O nás",
+      process: "Ako pracujeme",
       services: "Služby",
       projects: "Projekty",
       reviews: "Recenzie",
@@ -278,23 +341,53 @@ export const translations = {
       steps: [
         {
           title: "Dopyt",
-          text: "Ozvite sa nám telefonicky, SMS, e-mailom alebo cez kontaktný formulár na webe — stačí pár slov o vašom zámere.",
+          duration: "zvyčajne do 24 hodín",
+          text: "Ozvite sa nám telefonicky, SMS, e-mailom alebo cez kontaktný formulár na webe. Stačí pár slov o vašom zámere, lokalite a približnom rozsahu — zvyšok doladíme spoločne.",
+          bullets: [
+            "Zvyčajne odpovedáme do 24 hodín",
+            "Dohodneme si termín obhliadky na mieste",
+            "Bez záväzkov a bez poplatkov",
+          ],
         },
         {
           title: "Konzultácia a ponuka",
-          text: "Prejdeme rozsah prác, prezrieme miesto realizácie a pripravíme nezáväznú cenovú ponuku.",
+          duration: "1–3 dni",
+          text: "Prídeme na miesto realizácie, prejdeme vaše predstavy a technické možnosti. Na základe obhliadky pripravíme nezáväznú cenovú ponuku s rozpisom prác.",
+          bullets: [
+            "Osobná obhliadka miesta realizácie",
+            "Návrh rozsahu a postupu prác",
+            "Písomná cenová ponuka zadarmo",
+          ],
         },
         {
           title: "Zmluva a záloha",
-          text: "Po odsúhlasení podmienok podpíšeme zmluvu o dielo a prijmeme zálohu na začatie prác.",
+          duration: "v deň podpisu",
+          text: "Po odsúhlasení podmienok podpíšeme zmluvu o dielo s jasne daným rozsahom, cenou a termínmi. Prijmeme zálohu, ktorá nám umožní začať prípravu a nákup materiálu.",
+          bullets: [
+            "Zmluva o dielo s jasnou cenou a rozsahom",
+            "Záloha na začatie prác",
+            "Dohoda presného termínu začatia",
+          ],
         },
         {
           title: "Realizácia",
-          text: "Vykonáme dohodnuté práce v dohodnutom termíne a priebežne vás informujeme o postupe.",
+          duration: "podľa rozsahu prác",
+          text: "Vykonáme dohodnuté práce v dohodnutom termíne s dôrazom na kvalitu a čistotu na stavenisku. Priebežne vás informujeme o postupe a prípadných zmenách.",
+          bullets: [
+            "Práce podľa dohodnutého harmonogramu",
+            "Priebežná fotodokumentácia postupu",
+            "Kvalitné materiály a skúsený tím",
+          ],
         },
         {
           title: "Odovzdanie a doplatok",
-          text: "Dielo odovzdáme, podpíšeme odovzdávací protokol, uhradíte doplatok — hotovo.",
+          duration: "po dokončení",
+          text: "Po dokončení vykonáme finálnu kontrolu a upraceme miesto realizácie. Dielo odovzdáme, podpíšeme odovzdávací protokol a uhradíte zostávajúci doplatok.",
+          bullets: [
+            "Finálna kontrola kvality a upratanie",
+            "Podpis odovzdávacieho protokolu",
+            "Doplatok a záruka na vykonané práce",
+          ],
         },
       ],
     },

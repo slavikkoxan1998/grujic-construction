@@ -180,6 +180,7 @@ export default function SiteHeader() {
             {[
               { to: "/", label: t.nav.home, bold: true },
               { to: "/#about", label: t.nav.about },
+              { to: "/#process", label: t.nav.process },
               { to: "/#services", label: t.nav.services },
               { to: "/#projects", label: t.nav.projects },
               { to: "/#testimonials", label: t.nav.reviews },
@@ -239,6 +240,9 @@ export default function SiteHeader() {
             </Link>
             <Link to="/#about" className="block text-[#CD1D14] py-3.5 border-b border-white/15 hover:text-[#CD1D14]/70 transition-colors font-semibold [text-shadow:0_1px_2px_rgba(0,0,0,0.35)]" onClick={() => setMobileMenuOpen(false)}>
               {t.nav.about}
+            </Link>
+            <Link to="/#process" className="block text-[#CD1D14] py-3.5 border-b border-white/15 hover:text-[#CD1D14]/70 transition-colors font-semibold [text-shadow:0_1px_2px_rgba(0,0,0,0.35)]" onClick={() => setMobileMenuOpen(false)}>
+              {t.nav.process}
             </Link>
             <Link to="/#services" className="block text-[#CD1D14] py-3.5 border-b border-white/15 hover:text-[#CD1D14]/70 transition-colors font-semibold [text-shadow:0_1px_2px_rgba(0,0,0,0.35)]" onClick={() => setMobileMenuOpen(false)}>
               {t.nav.services}
