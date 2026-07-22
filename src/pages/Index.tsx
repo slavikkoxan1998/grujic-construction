@@ -127,6 +127,32 @@ export default function Index() {
           </div>
         </section>
 
+        {/* Process Section - how the collaboration works from inquiry to handover */}
+        <section id="process" className="py-12 sm:py-16 md:py-32 bg-white border-t border-[#eee]">
+          <div className="max-w-7xl mx-auto px-4 md:px-8">
+            <div className="mb-8 sm:mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-[#3a3a3a] mb-4">{t.process.title}</h2>
+              <p className="text-xl text-[#555555] font-light">{t.process.subtitle}</p>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-4">
+              {t.process.steps.map((step, i) => (
+                <div key={step.title} className="relative flex flex-col items-start">
+                  <div className="w-12 h-12 rounded-full bg-[#D4A574] text-[#CD1D14] font-bold text-lg flex items-center justify-center mb-4 flex-shrink-0">
+                    {i + 1}
+                  </div>
+                  {/* Connector line to the next step (desktop only, not after the last) */}
+                  {i < t.process.steps.length - 1 && (
+                    <div className="hidden lg:block absolute top-6 left-12 w-full h-0.5 bg-[#D4A574]/30" />
+                  )}
+                  <h3 className="text-lg font-semibold text-[#3a3a3a] mb-2">{step.title}</h3>
+                  <p className="text-[#555555] leading-relaxed">{step.text}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Services Section */}
         <section id="services" className="py-12 sm:py-16 md:py-32 bg-[#f8f7f5]">
           <div className="max-w-7xl mx-auto px-4 md:px-8">

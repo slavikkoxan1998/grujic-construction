@@ -34,6 +34,33 @@ export const translations = {
       testimonials: "Recenze klientů",
       contact: "Kontakt",
     },
+    // How we work (homepage process timeline)
+    process: {
+      title: "Jak pracujeme",
+      subtitle: "Od prvního kontaktu až po předání hotové práce",
+      steps: [
+        {
+          title: "Poptávka",
+          text: "Ozvete se nám telefonicky, SMS, e-mailem nebo přes kontaktní formulář na webu — stačí pár slov o vašem záměru.",
+        },
+        {
+          title: "Konzultace a nabídka",
+          text: "Probereme rozsah prací, prohlédneme místo realizace a připravíme nezávaznou cenovou nabídku.",
+        },
+        {
+          title: "Smlouva a záloha",
+          text: "Po odsouhlasení podmínek podepíšeme smlouvu o dílo a přijmeme zálohu na zahájení prací.",
+        },
+        {
+          title: "Realizace",
+          text: "Provedeme dohodnuté práce v dohodnutém termínu a průběžně vás informujeme o postupu.",
+        },
+        {
+          title: "Předání a doplatek",
+          text: "Dílo předáme, podepíšeme předávací protokol, uhradíte doplatek — hotovo.",
+        },
+      ],
+    },
     // Testimonials
     testimonials: {
       subtitle: "Co o nás říkají naši klienti",
@@ -129,6 +156,33 @@ export const translations = {
       testimonials: "Client reviews",
       contact: "Contact",
     },
+    // How we work (homepage process timeline)
+    process: {
+      title: "How we work",
+      subtitle: "From the first contact to handing over the finished work",
+      steps: [
+        {
+          title: "Inquiry",
+          text: "Reach out by phone, SMS, e-mail or the contact form on the website — just a few words about what you need.",
+        },
+        {
+          title: "Consultation & quote",
+          text: "We discuss the scope of work, inspect the site, and prepare a non-binding price quote.",
+        },
+        {
+          title: "Contract & deposit",
+          text: "Once terms are agreed, we sign the works contract and take a deposit to begin work.",
+        },
+        {
+          title: "Execution",
+          text: "We carry out the agreed work within the agreed timeframe, keeping you updated on progress.",
+        },
+        {
+          title: "Handover & final payment",
+          text: "We hand over the finished work, sign the handover protocol, you pay the balance — done.",
+        },
+      ],
+    },
     // Testimonials
     testimonials: {
       subtitle: "What our clients say about us",
@@ -216,6 +270,33 @@ export const translations = {
       projectsSubtitle: "Realizované stavby a ich kvalita",
       testimonials: "Recenzie klientov",
       contact: "Kontakt",
+    },
+    // How we work (homepage process timeline)
+    process: {
+      title: "Ako pracujeme",
+      subtitle: "Od prvého kontaktu až po odovzdanie hotovej práce",
+      steps: [
+        {
+          title: "Dopyt",
+          text: "Ozvite sa nám telefonicky, SMS, e-mailom alebo cez kontaktný formulár na webe — stačí pár slov o vašom zámere.",
+        },
+        {
+          title: "Konzultácia a ponuka",
+          text: "Prejdeme rozsah prác, prezrieme miesto realizácie a pripravíme nezáväznú cenovú ponuku.",
+        },
+        {
+          title: "Zmluva a záloha",
+          text: "Po odsúhlasení podmienok podpíšeme zmluvu o dielo a prijmeme zálohu na začatie prác.",
+        },
+        {
+          title: "Realizácia",
+          text: "Vykonáme dohodnuté práce v dohodnutom termíne a priebežne vás informujeme o postupe.",
+        },
+        {
+          title: "Odovzdanie a doplatok",
+          text: "Dielo odovzdáme, podpíšeme odovzdávací protokol, uhradíte doplatok — hotovo.",
+        },
+      ],
     },
     // Testimonials
     testimonials: {
