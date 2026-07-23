@@ -24,7 +24,7 @@ export const featuredProjects: FeaturedProject[] = [
     slug: "zatepleni-fasady-nova-zbrojovka",
     name: "Zateplení fasády – Nová Zbrojovka",
     location: "Brno-Zábrdovice (Nová Zbrojovka)",
-    images: gallery("zatepleni-fasady-nova-zbrojovka", 3),
+    images: gallery("zatepleni-fasady-nova-zbrojovka", 12),
     description:
       "Zateplení fasád v rámci moderního developerského areálu Nová Zbrojovka v Brně. Na betonové a zděné konstrukce jsme aplikovali kontaktní zateplovací systém z minerální vaty — včetně kotvení talířovými hmoždinkami, soklových partií z XPS a napojení na navazující prosklené a plechové fasády okolních objektů. Následně byla natažena armovací tkanina (perlinka) a zastěrkována do lepicí stěrky — vznikla tak kompletní armovací vrstva připravená pod finální omítku.",
     workItems: [

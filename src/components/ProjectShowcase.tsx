@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { projectImage } from "../lib/images";
+import Lightbox from "./Lightbox";
 
 interface ProjectShowcaseProps {
   name: string;
@@ -12,6 +13,7 @@ export default function ProjectShowcase({ name, slug, imageKeys }: ProjectShowca
   const resolved = imageKeys.map(projectImage);
   const multi = resolved.length > 1;
   const [index, setIndex] = useState(0);
+  const [lightboxOpen, setLightboxOpen] = useState(false);
   const navigate = useNavigate();
 
   // Swipe support: mobile has no :hover, so the arrow buttons alone aren't
@@ -123,10 +125,34 @@ export default function ProjectShowcase({ name, slug, imageKeys }: ProjectShowca
             </div>
           </>
         )}
+
+        <button
+          type="button"
+          aria-label="Otevřít fotku na celou obrazovku"
+          onClick={(e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            setLightboxOpen(true);
+          }}
+          className="absolute top-2 right-2 w-8 h-8 rounded-full bg-black/40 text-[#CD1D14] flex items-center justify-center opacity-100 md:opacity-0 md:group-hover:opacity-100 md:focus:opacity-100 transition-opacity outline-none z-10"
+        >
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="w-4 h-4">
+            <path d="M9 3H5a2 2 0 0 0-2 2v4M15 3h4a2 2 0 0 1 2 2v4M9 21H5a2 2 0 0 1-2-2v-4M15 21h4a2 2 0 0 0 2-2v-4" />
+          </svg>
+        </button>
       </div>
       <div className="bg-white p-4">
         <h3 className="text-[#3a3a3a] font-semibold text-sm sm:text-base">{name}</h3>
       </div>
+
+      {lightboxOpen && (
+        <Lightbox
+          images={resolved}
+          index={index}
+          onClose={() => setLightboxOpen(false)}
+          onIndexChange={setIndex}
+        />
+      )}
     </div>
   );
 }

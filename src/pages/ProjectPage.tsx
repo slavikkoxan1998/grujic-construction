@@ -1,7 +1,9 @@
+import { useState } from "react";
 import { useParams, Link, Navigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import SiteHeader from "../components/SiteHeader";
 import SiteFooter from "../components/SiteFooter";
+import Lightbox from "../components/Lightbox";
 import { getProjectBySlug } from "../data/projects";
 import { projectImage } from "../lib/images";
 import { SITE_URL } from "../lib/business";
@@ -13,6 +15,7 @@ export default function ProjectPage() {
   const { slug } = useParams();
   const { lang, t } = useLang();
   const project = slug ? getProjectBySlug(slug) : undefined;
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
   if (!project) {
     return <Navigate to="/" replace />;
@@ -94,9 +97,15 @@ export default function ProjectPage() {
             <h2 className="text-2xl sm:text-3xl font-bold text-[#3a3a3a] mb-8">{t.project.gallery}</h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
               {galleryImages.map((src, i) => (
-                <div key={src + i} className="rounded-xl overflow-hidden shadow-md aspect-square">
+                <button
+                  type="button"
+                  key={src + i}
+                  onClick={() => setLightboxIndex(i)}
+                  aria-label={`Zobrazit fotku ${i + 1} na celou obrazovku`}
+                  className="rounded-xl overflow-hidden shadow-md aspect-square cursor-pointer"
+                >
                   <img src={src} alt={project.name} loading="lazy" className="w-full h-full object-cover" />
-                </div>
+                </button>
               ))}
             </div>
           </div>
@@ -137,6 +146,15 @@ export default function ProjectPage() {
       </main>
 
       <SiteFooter />
+
+      {lightboxIndex !== null && (
+        <Lightbox
+          images={galleryImages}
+          index={lightboxIndex}
+          onClose={() => setLightboxIndex(null)}
+          onIndexChange={setLightboxIndex}
+        />
+      )}
     </div>
   );
 }
