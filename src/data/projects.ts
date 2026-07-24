@@ -21,6 +21,21 @@ const gallery = (slug: string, count: number): string[] =>
 
 export const featuredProjects: FeaturedProject[] = [
   {
+    slug: "rekonstrukce-koupelny-brno-sever",
+    name: "Rekonstrukce koupelny Brno-sever",
+    location: "Brno-sever",
+    images: gallery("rekonstrukce-koupelny-brno-sever", 0),
+    description:
+      "Kompletní rekonstrukce koupelny v Brně",
+    workItems: [
+      "Demontaž staréh zdi",
+      "Montáž nových",
+      "Realizace perlinky",
+      "Hydroizolace",
+      "Nalepení obkladů a dlažby",
+    ],
+  },
+  {
     slug: "zatepleni-fasady-nova-zbrojovka",
     name: "Zateplení fasády – Nová Zbrojovka",
     location: "Brno-Zábrdovice (Nová Zbrojovka)",
