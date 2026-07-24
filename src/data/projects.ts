@@ -24,7 +24,7 @@ export const featuredProjects: FeaturedProject[] = [
     slug: "rekonstrukce-koupelny-brno-sever",
     name: "Rekonstrukce koupelny Brno-sever",
     location: "Brno-sever",
-    images: gallery("rekonstrukce-koupelny-brno-sever", 0),
+    images: gallery("rekonstrukce-koupelny-brno-sever", 1),
     description:
       "Kompletní rekonstrukce koupelny v Brně",
     workItems: [
